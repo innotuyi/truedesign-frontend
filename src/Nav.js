@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./image/lOGO.png";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -74,16 +75,21 @@ const Nav = () => {
                   </a>
                 </div>
               </div>
-              <a href="service.html" class="nav-item nav-link">
+              <NavLink to="/service">
+              <a class="nav-item nav-link">
                 Service
               </a>
-
-              <a href="about.html" class="nav-item nav-link">
+              </NavLink>
+              <NavLink to="/about">
+              <a class="nav-item nav-link">
                 About
               </a>
-              <a href="contact.html" class="nav-item nav-link">
+              </NavLink>
+              <NavLink to="/contact">
+              <a class="nav-item nav-link">
                 Contact
               </a>
+              </NavLink>
             </div>
             <butaton
               type="button"

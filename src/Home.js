@@ -42,12 +42,12 @@ const Home = () => {
         {/* <!-- Newsletter End -->
         <!-- Service Start --> */}
 
-        <Service/>
+        {/* <Service/> */}
         
         {/* <!-- Service End -->
         <!-- Portfolio Start --> */}
 
-        <Portfolio/>
+       {/* <Portfolio/> */}
         
         {/* <!-- Portfolio End -->
 

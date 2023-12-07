@@ -84,12 +84,18 @@ const Nav2 = ({page}) => {
               </NavLink>
              
 
-              <a href="about.html" class="nav-item nav-link">
+             
+              <NavLink to="/about">
+              <a class="nav-item nav-link">
                 About
               </a>
-              <a href="contact.html" class="nav-item nav-link">
+              </NavLink>
+            
+              <NavLink to="/contact">
+              <a class="nav-item nav-link">
                 Contact
               </a>
+              </NavLink>
             </div>
             <butaton
               type="button"
