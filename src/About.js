@@ -1,8 +1,11 @@
 import React from "react";
-
+import Image1 from './image/1.webp'
+import Footer from './Footer'
+import Nav2 from './Nav2'
 const About = () => {
   return (
     <>
+    <Nav2 page="About"/>
       <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div class="row g-5">
@@ -10,14 +13,14 @@ const About = () => {
               <div class="section-title position-relative mb-4 pb-2">
                 <h6 class="position-relative text-primary ps-4">About Us</h6>
                 <h2 class="mt-2">
-                  The best SEO solution with 10 years of experience
+                justo et tempor eirmod  domagnalore erat amet
                 </h2>
               </div>
               <p class="mb-4">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum et
                 tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum
                 et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
-                justo et tempor eirmod magna dolore erat amet
+                justo et tempor eirmod  domagnalore erat amet
               </p>
               <div class="row g-3">
                 <div class="col-sm-6">
@@ -39,9 +42,6 @@ const About = () => {
                 </div>
               </div>
               <div class="d-flex align-items-center mt-4">
-                <a class="btn btn-primary rounded-pill px-4 me-3" href="">
-                  Read More
-                </a>
                 <a class="btn btn-outline-primary btn-square me-3" href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
@@ -66,6 +66,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
