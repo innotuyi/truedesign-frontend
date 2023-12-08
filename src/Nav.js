@@ -20,60 +20,45 @@ const Nav = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">
+              <NavLink to='/'>
+              <a class="nav-item nav-link active">
                 Home
               </a>
-              <div class="nav-item dropdown">
+
+              </NavLink>
+             
+              <div class="nav-item">
+                <NavLink to="/design">
                 <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
+                  class="nav-link"
                 >
                   Designing
                 </a>
-                <div class="dropdown-menu m-0">
-                  <a href="team.html" class="dropdown-item">
-                    sub1
-                  </a>
-                  <a href="testimonial.html" class="dropdown-item">
-                    sub2
-                  </a>
-                </div>
+                </NavLink>
+               
               </div>
 
-              <div class="nav-item dropdown">
-                <a
+              <div class="nav-item">
+            <NavLink to="/printing">
+            <a
                   href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
+                  class="nav-link"
                 >
                   Printing
                 </a>
-                <div class="dropdown-menu m-0">
-                  <a href="team.html" class="dropdown-item">
-                    sub1
-                  </a>
-                  <a href="testimonial.html" class="dropdown-item">
-                    sub2
-                  </a>
-                </div>
+            </NavLink>
               </div>
-              <div class="nav-item dropdown">
+              <div class="nav-item">
+
+                <NavLink to='/branding'>
                 <a
                   href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
+                  class="nav-link"
                 >
                   Branding
                 </a>
-                <div class="dropdown-menu m-0">
-                  <a href="team.html" class="dropdown-item">
-                    Sub 1
-                  </a>
-                  <a href="testimonial.html" class="dropdown-item">
-                    Sub 2
-                  </a>
-                </div>
+                </NavLink>
+               
               </div>
               <NavLink to="/service">
               <a class="nav-item nav-link">
@@ -91,14 +76,6 @@ const Nav = () => {
               </a>
               </NavLink>
             </div>
-            <butaton
-              type="button"
-              class="btn text-secondary ms-3"
-              data-bs-toggle="modal"
-              data-bs-target="#searchModal"
-            >
-              {" "}
-            </butaton>
           </div>
         </nav>
 
@@ -122,8 +99,9 @@ const Nav = () => {
                   Contact Us
                 </a>
               </div>
-              <div class="col-lg-6 text-center text-lg-start">
-                <img class="img-fluid" src="img/hero.png" alt="" />
+              <div class="col-lg-6 text-center text-lg-start" style={{
+              }}>
+                <img class="img-fluid mb-5" src="img/hero.jpeg" alt=""  height="200px"/>
               </div>
             </div>
           </div>

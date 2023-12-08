@@ -13,34 +13,12 @@ const About = () => {
               <div class="section-title position-relative mb-4 pb-2">
                 <h6 class="position-relative text-primary ps-4">About Us</h6>
                 <h2 class="mt-2">
-                justo et tempor eirmod  domagnalore erat amet
+                The TRUE DESIGN Ltd 
                 </h2>
               </div>
               <p class="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum et
-                tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum
-                et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
-                justo et tempor eirmod  domagnalore erat amet
+             is a private company legally registered in Rwanda at Rwanda Development Board (RDB) with an incorporation number of 111419795 aimed at giving services of graphic design by Designing, printing and Branding. Like Banners designing and printing, pull up banners, teal drop, stickers, notepad, agenda, paper bags, flyers, brochures, branded trophies, T-shirts printing, services cards, badges, business card, hat and cups, promotional pens, bill boards, photo making, key holders, shopping envelopes and certificates
               </p>
-              <div class="row g-3">
-                <div class="col-sm-6">
-                  <h6 class="mb-3">
-                    <i class="fa fa-check text-primary me-2"></i>Award Winning
-                  </h6>
-                  <h6 class="mb-0">
-                    <i class="fa fa-check text-primary me-2"></i>Professional
-                    Staff
-                  </h6>
-                </div>
-                <div class="col-sm-6">
-                  <h6 class="mb-3">
-                    <i class="fa fa-check text-primary me-2"></i>24/7 Support
-                  </h6>
-                  <h6 class="mb-0">
-                    <i class="fa fa-check text-primary me-2"></i>Fair Prices
-                  </h6>
-                </div>
-              </div>
               <div class="d-flex align-items-center mt-4">
                 <a class="btn btn-outline-primary btn-square me-3" href="">
                   <i class="fab fa-facebook-f"></i>
@@ -56,12 +34,13 @@ const About = () => {
                 </a>
               </div>
             </div>
-            <div class="col-lg-6">
-              <img
-                class="img-fluid wow zoomIn"
-                data-wow-delay="0.5s"
-                src="img/about.jpg"
-              />
+            <div class="col-lg-6 bg-light justify-content-center text-center">
+            <h2 class="pt-5">Mission</h2>
+              <p>Modernization of the designing, Printing and Branding through digital and modernized printing and branding service
+              </p>
+              <h2>Vision</h2>
+              <p>To completely grow brands of the businesses in Rwanda by serving them with all kinds of promotional materials and packaging
+              </p>
             </div>
           </div>
         </div>

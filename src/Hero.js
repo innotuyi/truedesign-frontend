@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 const Hero = () => {
   return (
     <>
@@ -30,7 +32,7 @@ const Hero = () => {
                 </a>
               </div>
               <div class="col-lg-6 text-center text-lg-start">
-                <img class="img-fluid" src="img/hero.png" alt="" />
+                <img class="img-fluid" src="img/" alt="" />
               </div>
             </div>
           </div>
