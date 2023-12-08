@@ -12,10 +12,10 @@ const Footer = () => {
               <div class="col-md-6 col-lg-4">
                 <h5 class="text-white mb-4">Get In Touch</h5>
                 <p>
-                  <i class="fa fa-map-marker-alt me-3"></i>Kigali,Rwanda
+                  <i class="fa fa-map-marker-alt me-3"></i>Kigali,RUBANGURA HOUSE
                 </p>
                 <p>
-                  <i class="fa fa-phone-alt me-3"></i>+25078665432
+                  <i class="fa fa-phone-alt me-3"></i>+(250) 788 81 433/ +(250) 785382211
                 </p>
                 <p>
                   <i class="fa fa-envelope me-3"></i>info@example.com
