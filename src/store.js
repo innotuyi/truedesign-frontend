@@ -6,6 +6,7 @@ import {
     propertiesListReducer,
     printingFilterReducer,
     brandingFilterReducer,
+    designingFilterReducer
 
   } from "./reducers/propertiesReducers";
 
@@ -17,6 +18,7 @@ const reducer = combineReducers({
     propertyLists: propertiesListReducer,
     printingLists:printingFilterReducer,
     brandingLists:brandingFilterReducer,
+    designingLists:designingFilterReducer,
     activeCategory: activeCategoryReducer,
   });
   

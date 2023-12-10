@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./image/lOGO.png";
 import { NavLink, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { printingFilter, brandingFilter } from './actions/productFilterAction'
+import { printingFilter, brandingFilter, designingFilter} from './actions/productFilterAction'
 
 import { PRINTING, DESIGNING, BRANDING, FOR_RENT, FOR_SALE, LATEST } from "./actions/types";
 
@@ -18,6 +18,12 @@ const Nav = () => {
   function handleBranding() {
     dispatch({ type: BRANDING });
     dispatch(brandingFilter());
+
+  }
+
+  function handleDesigning() {
+    dispatch({ type: DESIGNING });
+    dispatch(designingFilter());
 
   }
 
@@ -49,6 +55,7 @@ const Nav = () => {
                 <NavLink>
                   <a
                     class="nav-link"
+                    onClick={handleDesigning}
                   >
                     Designing
                   </a>

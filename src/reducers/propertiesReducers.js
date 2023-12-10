@@ -11,6 +11,10 @@ import {
     BRANDING_SUCCESS,
     BRANDING_FAIL,
 
+    DESIGNING_REQUEST,
+    DESIGNING_SUCCESS,
+    DESIGNING_FAIL,
+
 
   } from "../actions/types";
 
@@ -48,8 +52,6 @@ import {
     }
   };
 
-
-  
   export const brandingFilterReducer = (state = { branding: [] }, action) => {
     switch (action.type) {
       case BRANDING_REQUEST:
@@ -66,5 +68,21 @@ import {
     }
   };
 
+
+  export const designingFilterReducer = (state = { designing: [] }, action) => {
+    switch (action.type) {
+      case DESIGNING_REQUEST:
+        return { designingLoading: true, designing: [] };
+      case DESIGNING_SUCCESS:
+        return { 
+          designing: action.payload, 
+        };
+  
+      case DESIGNING_FAIL:
+        return { designingLoading: false, designingError: action.payload };
+      default:
+        return state;
+    }
+  };
 
  

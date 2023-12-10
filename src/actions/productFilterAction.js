@@ -7,6 +7,11 @@ import {
     BRANDING_SUCCESS,
     BRANDING_FAIL,
 
+    DESIGNING_REQUEST,
+    DESIGNING_SUCCESS,
+    DESIGNING_FAIL,
+    DESIGNING,
+
   } from "../actions/types";
 
   import axios from "axios";
@@ -51,6 +56,28 @@ import {
 
       dispatch({ type:BRANDING_FAIL, payload:  error});
       console.log("all error", "error occured" )
+
+
+    }
+  };
+
+  export const  designingFilter = () => async (dispatch) => {
+    try {
+      dispatch({ type: DESIGNING_REQUEST
+     });
+  
+      const response = await axios.get(
+        "http://127.0.0.1:8000/api/designing"
+      );
+  
+      dispatch({ type:DESIGNING_SUCCESS, payload: response.data});
+      console.log("all DESIGNING ", response.data )
+
+      
+    } catch (error) {
+
+      dispatch({ type:DESIGNING_FAIL, payload:  error});
+      console.log("all ERROR", "error occured" )
 
 
     }

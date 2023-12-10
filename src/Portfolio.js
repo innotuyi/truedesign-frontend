@@ -17,9 +17,15 @@ const Portfolio = () => {
 
   const allBrandings = useSelector((state) => state.brandingLists);
 
+  const allDesignings = useSelector((state) => state.designingLists);
+
+
   const {brandingLoading, brandingError, branding } = allBrandings;
 
   const { printingLoading, PrintingError, printing } = allPrintings;
+
+  const { designingLoading, designingError, designing } = allDesignings;
+
 
   const { loading, error, properties } = allProperties;
 
@@ -32,7 +38,11 @@ const Portfolio = () => {
     allproperties = printing;
   } else if(branding.length && activeCategory === "branding") {
     allproperties = branding;
-  } else {
+  } else if(designing.length && activeCategory === "designing") {
+    allproperties = designing
+  }
+  
+  else {
     allproperties = properties;
   }  
   useEffect(() => {
