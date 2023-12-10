@@ -1,8 +1,26 @@
 import React from "react";
 import Logo from "./image/lOGO.png";
 import { NavLink, Outlet } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { printingFilter, brandingFilter } from './actions/productFilterAction'
+
+import { PRINTING, DESIGNING, BRANDING, FOR_RENT, FOR_SALE, LATEST } from "./actions/types";
+
 
 const Nav = () => {
+  const dispatch = useDispatch();
+
+  function handlePrinting() {
+    dispatch({ type: PRINTING });
+    dispatch(printingFilter());
+
+  }
+  function handleBranding() {
+    dispatch({ type: BRANDING });
+    dispatch(brandingFilter());
+
+  }
+
   return (
     <>
       <div class="container-xxl position-relative p-0">
@@ -21,59 +39,59 @@ const Nav = () => {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
               <NavLink to='/'>
-              <a class="nav-item nav-link active">
-                Home
-              </a>
+                <a class="nav-item nav-link active">
+                  Home
+                </a>
 
               </NavLink>
-             
+
               <div class="nav-item">
-                <NavLink to="/design">
-                <a
-                  class="nav-link"
-                >
-                  Designing
-                </a>
+                <NavLink>
+                  <a
+                    class="nav-link"
+                  >
+                    Designing
+                  </a>
                 </NavLink>
-               
+
               </div>
 
               <div class="nav-item">
-            <NavLink to="/printing">
-            <a
-                  href="#"
-                  class="nav-link"
-                >
-                  Printing
-                </a>
-            </NavLink>
+                <NavLink>
+                  <a
+                    href="#"
+                    class="nav-link"
+                    onClick={handlePrinting}
+                  >
+                    Printing
+                  </a>
+                </NavLink>
               </div>
               <div class="nav-item">
 
-                <NavLink to='/branding'>
-                <a
-                  href="#"
-                  class="nav-link"
-                >
-                  Branding
-                </a>
+                <NavLink>
+                  <a class="nav-link"
+                    onClick={handleBranding}
+                  >
+                    Branding
+                  </a>
                 </NavLink>
-               
+
               </div>
               <NavLink to="/service">
-              <a class="nav-item nav-link">
-                Service
-              </a>
+                <a class="nav-item nav-link">
+                  Service
+                </a>
               </NavLink>
               <NavLink to="/about">
-              <a class="nav-item nav-link">
-                About
-              </a>
+                <a class="nav-item nav-link">
+                  About
+                </a>
               </NavLink>
               <NavLink to="/contact">
-              <a class="nav-item nav-link">
-                Contact
-              </a>
+                <a class="nav-item nav-link">
+                  Contact
+                </a>
               </NavLink>
             </div>
           </div>
@@ -101,7 +119,7 @@ const Nav = () => {
               </div>
               <div class="col-lg-6 text-center text-lg-start" style={{
               }}>
-                <img class="img-fluid mb-5" src="img/hero.jpeg" alt=""  height="200px"/>
+                <img class="img-fluid mb-5" src="img/hero.jpeg" alt="" height="200px" />
               </div>
             </div>
           </div>

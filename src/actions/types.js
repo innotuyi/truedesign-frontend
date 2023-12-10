@@ -1,0 +1,28 @@
+export const PRODUCT_REQUEST = "PRODUCT_REQUEST";
+export const PRODUCT_SUCCESS = "PRODUCT_SUCCESS";
+export const PRODUCT_FAIL = "PRODUCT_FAIL";
+
+
+export const PRINTING_REQUEST = "PRINTING_REQUEST";
+export const PRINTING_SUCCESS = "PRINTING_SUCCESS";
+export const PRINTING_FAIL = "PRINTING_FAIL";
+
+
+
+
+export const BRANDING_REQUEST = "BRANDING_REQUEST";
+export const BRANDING_SUCCESS = "BRANDING_SUCCESS";
+export const BRANDING_FAIL = "BRANDING_FAIL"
+
+
+export const PRINTING = "PRINTING";
+
+export const BRANDING = "BRANDING";
+
+export const DESIGNING = "DESIGNING";
+
+export const FOR_RENT = "FOR_RENT";
+
+export const FOR_SALE = "FOR_SALE";
+
+export const LATEST = "LATEST";

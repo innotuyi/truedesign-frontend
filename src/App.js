@@ -8,6 +8,7 @@ import Contact from './Contact'
 import Branding from './Branding'
 import Designing from './Designing'
 import Printing from './Printing'
+import Dashboard from './Dashboard'
 
 function App() {
   return (
@@ -21,8 +22,7 @@ function App() {
           <Route path="branding" element ={<Branding/>} />
           <Route path="printing" element ={<Printing/>} />
           <Route path="design" element ={<Designing/>} />
-
-
+          <Route path="dashboard" element ={<Dashboard/>} />
           </Routes>
       </BrowserRouter>
     </>
