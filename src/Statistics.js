@@ -150,7 +150,7 @@ useEffect(  ()=>{
             <div class="card m-4 border-0 shadow">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h6 class="mb-0">Properties</h6>
+                        <h6 class="mb-0">Products</h6>
                         <span class="badge bg-primary">{count}</span>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ useEffect(  ()=>{
             <div class="card m-4 border-0 shadow">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h6 class="mb-0">For Rent</h6>
+                        <h6 class="mb-0">Message</h6>
                         <span class="badge bg-success">{forRent}</span>
                     </div>
                 </div>
@@ -180,7 +180,7 @@ useEffect(  ()=>{
             <div class="card m-4 border-0 shadow">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h6 class="mb-0">For Sale</h6>
+                        <h6 class="mb-0">Message</h6>
                         <span class="badge bg-warning">{forsale}</span>
                     </div>
                 </div>
@@ -188,24 +188,7 @@ useEffect(  ()=>{
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Messages</h3>
-            <ul class="list-group">
-                {messages.map((message) => (
-                    <li class="list-group-item mb-1 border-0 shadow-sm">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">{message.name}</h5>
-                                <h6>{message.subject}</h6>
-                                <p>{message.message}</p>
-                            </div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    </div>
+    
 </div>
 
 

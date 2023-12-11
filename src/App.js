@@ -14,6 +14,7 @@ import ProductList from './ProductList'
 import MessagePage from './MessagePage'
 import LoginPage from './LoginPage'
 import RegisterPage from './RegisterPage'
+import PaymentProcess from './PaymentProcess'
 function App() {
   return (
     <>
@@ -32,6 +33,8 @@ function App() {
           <Route path="message" element ={<MessagePage/>} />
           <Route path="login" element ={<LoginPage/>} />
           <Route path="register" element ={<RegisterPage/>} />
+          <Route path="payment" element ={<PaymentProcess/>} />
+
 
 
 
