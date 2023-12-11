@@ -11,3 +11,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.sidebar-bg {
+
+  background-color: #2124B1;
+  height: 120vh;
+  position: fixed;
+}
+.statistics {
+
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  left: 20%;
+
+   
+}
+
+ul {
+
+  list-style-type: none;
+}
+
+ul >li {
+
+  padding-bottom: 1.5rem;
+}
+.sidebar-bg li>a{
+  padding-bottom:1rem;
+  color:#fff;
+  list-style: none;
+}
+
+.sidebar a:hover {
+
+  cursor: pointer;
+  background-color: #dcdcdc;
+
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  
+
+}
+
+.input-group {
+  width: 400px !important;
+  border-radius: 1rem;
+
+}
+.statistics h4{
+  font-family: sans-serif;
+  color:black !important;
+  font-weight: #fff;
+
+   
+}

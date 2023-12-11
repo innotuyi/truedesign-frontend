@@ -9,7 +9,7 @@ import Branding from './Branding'
 import Designing from './Designing'
 import Printing from './Printing'
 import Dashboard from './Dashboard'
-
+import ProductScreen from './ProductScreen'
 function App() {
   return (
     <>
@@ -23,6 +23,8 @@ function App() {
           <Route path="printing" element ={<Printing/>} />
           <Route path="design" element ={<Designing/>} />
           <Route path="dashboard" element ={<Dashboard/>} />
+          <Route path="AddProduct" element ={<ProductScreen/>} />
+
           </Routes>
       </BrowserRouter>
     </>
