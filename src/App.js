@@ -10,6 +10,10 @@ import Designing from './Designing'
 import Printing from './Printing'
 import Dashboard from './Dashboard'
 import ProductScreen from './ProductScreen'
+import ProductList from './ProductList'
+import MessagePage from './MessagePage'
+import LoginPage from './LoginPage'
+import RegisterPage from './RegisterPage'
 function App() {
   return (
     <>
@@ -24,6 +28,14 @@ function App() {
           <Route path="design" element ={<Designing/>} />
           <Route path="dashboard" element ={<Dashboard/>} />
           <Route path="AddProduct" element ={<ProductScreen/>} />
+          <Route path="productList" element ={<ProductList/>} />
+          <Route path="message" element ={<MessagePage/>} />
+          <Route path="login" element ={<LoginPage/>} />
+          <Route path="register" element ={<RegisterPage/>} />
+
+
+
+
 
           </Routes>
       </BrowserRouter>

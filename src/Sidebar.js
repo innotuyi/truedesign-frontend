@@ -7,7 +7,7 @@ const Sidebar = () => {
     <div class="col-md-2 sidebar-bg sidebar ">
       <ul>
         <li>
-            <NavLink>
+            <NavLink to='/dashboard'>
             <i class="fa fa-envelope me-3"></i> <a to="/dashboard">Dashboard</a>
 
             </NavLink>
@@ -19,14 +19,14 @@ const Sidebar = () => {
             </NavLink>
         </li>
         <li>
-        <NavLink>
+        <NavLink to='/productList'>
         <i class="fa fa-envelope me-3"></i> <a to="/mylisting">Products</a>
         </NavLink>
         </li>
         
 
         <li>
-       <NavLink>
+       <NavLink to='/message'>
        <i class="fa fa-envelope me-3"></i> <a to="/messages">Messages</a>
        </NavLink>
         </li>
