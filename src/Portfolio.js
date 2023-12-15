@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { listProducts } from './actions/productAction'
 import { printingFilter } from './actions/productFilterAction'
 import { useDispatch, useSelector } from "react-redux";
+import config from './config'
 let allproperties = [];
 
 
@@ -29,7 +30,7 @@ const Portfolio = () => {
 
   const { loading, error, properties } = allProperties;
 
-  const imageUrl = "http://localhost:8000/storage/";
+  const imageUrl = config.imgUrl
 
 
   allproperties = properties;

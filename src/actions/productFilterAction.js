@@ -26,7 +26,7 @@ import {
      });
   
       const response = await axios.get(
-        "APP_URL/api/printing"
+        `${APP_URL}/api/printing`
       );
   
       dispatch({ type: PRINTING_SUCCESS, payload: response.data});
@@ -48,7 +48,7 @@ import {
      });
   
       const response = await axios.get(
-        "APP_URL/api/branding"
+        `${APP_URL}/api/branding`
       );
   
       dispatch({ type: BRANDING_SUCCESS, payload: response.data});
@@ -70,7 +70,7 @@ import {
      });
   
       const response = await axios.get(
-        "APP_URL/api/designing"
+        `${APP_URL}/api/designing`
       );
   
       dispatch({ type:DESIGNING_SUCCESS, payload: response.data});

@@ -19,7 +19,7 @@ import config from '../config'
       dispatch({ type: PRODUCT_REQUEST });
   
       const response = await axios.get(
-        `APP_URL/api/products`
+        `${APP_URL}/api/products`
       );
   
       dispatch({
