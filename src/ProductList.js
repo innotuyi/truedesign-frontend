@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar'
+import axios from 'axios'
+const imageUrl = "http://localhost:8000/storage/";
+
+import config from './config'
+
+const APP_URL = config.apiUrl
 
 const ProductList = () => {
     const [productList, setProductList] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
-  // Assume your API endpoint for fetching the product list is /api/getProducts
-  const fetchProductList = async () => {
-    try {
-      const response = await fetch('/api/getProducts');
-      const data = await response.json();
-      setProductList(data); // Assuming the API returns an array of product items
-    } catch (error) {
-      console.error('Error fetching product list:', error);
-    }
-  };
 
-  useEffect(() => {
-    // Fetch the product list when the component mounts
-    fetchProductList();
-  }, []);
+    useEffect(() => {
+      async function fetchProducts() {
+        const { data } = await axios.get(
+          "APP_URL/api/products"
+        );
+        console.log("before state", data)
+        setProductList(data);
+        console.log("all store properties", productList)
+      }
+  
+      fetchProducts();
+  
+    }, []);
+
 
     // Handle search term changes
     const handleSearch = (e) => {
@@ -38,8 +44,7 @@ const ProductList = () => {
     <>
     <div class="container-fluid pt-2">
     <div class="row">
-        <Sidebar />
-        
+        <Sidebar />       
         <div className="col-md-9">
       <div className="card m-4 border-0 shadow statistics">
         <div className="card-body">
@@ -66,19 +71,19 @@ const ProductList = () => {
               </tr>
             </thead>
             <tbody>
-              {filteredProducts.map((product, index) => (
+              {productList.map((product, index) => (
                 <tr key={index}>
-                  <th scope="row">{index + 1}</th>
-                  <td>{product.productName}</td>
-                  <td>{product.productCategory}</td>
+                  <th scope="row">{product.id}</th>
+                  <td>{product.name}</td>
+                  <td>{product.categoryID}</td>
                   <td>
-                    <img src={product.photo1} alt="Photo 1" className="img-thumbnail" />
+                    <img src={imageUrl + product.photo1} alt="Photo 1" className="img-thumbnail" width="40px" height="40px"/>
                   </td>
                   <td>
-                    <img src={product.photo2} alt="Photo 2" className="img-thumbnail" />
+                    <img src={imageUrl+ product.photo2} alt="Photo 2" className="img-thumbnail" width="40px" height="40px" />
                   </td>
                   <td>
-                    <img src={product.photo3} alt="Photo 3" className="img-thumbnail" />
+                    <img src={imageUrl+ product.photo3} alt="Photo 3" className="img-thumbnail" width="40px" height="40px"/>
                   </td>
                   <td>
                     {/* Add any action buttons or links for each item */}

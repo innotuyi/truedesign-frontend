@@ -6,7 +6,11 @@ import {
   } 
   from "../actions/types";
 
-  import axios from "axios";
+import config from '../config'
+
+ import axios from "axios";
+
+ const  APP_URL = config.apiUrl
 
 
   export const listProducts = () => async (dispatch) => {
@@ -15,7 +19,7 @@ import {
       dispatch({ type: PRODUCT_REQUEST });
   
       const response = await axios.get(
-        `http://127.0.0.1:8000/api/products`
+        `APP_URL/api/products`
       );
   
       dispatch({

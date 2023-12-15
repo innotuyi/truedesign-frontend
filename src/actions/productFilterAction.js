@@ -13,8 +13,11 @@ import {
     DESIGNING,
 
   } from "../actions/types";
+  import config from '../config'
 
   import axios from "axios";
+ 
+  const  APP_URL = config.apiUrl
 
 
   export const  printingFilter = () => async (dispatch) => {
@@ -23,7 +26,7 @@ import {
      });
   
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/printing"
+        "APP_URL/api/printing"
       );
   
       dispatch({ type: PRINTING_SUCCESS, payload: response.data});
@@ -45,7 +48,7 @@ import {
      });
   
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/branding"
+        "APP_URL/api/branding"
       );
   
       dispatch({ type: BRANDING_SUCCESS, payload: response.data});
@@ -67,7 +70,7 @@ import {
      });
   
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/designing"
+        "APP_URL/api/designing"
       );
   
       dispatch({ type:DESIGNING_SUCCESS, payload: response.data});

@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
+import axios from 'axios'
+
+import config from './config'
+
+const APP_URL = config.apiUrl
 
 const AddProductForm = () => {
   const [productName, setProductName] = useState('');
+  const [description, setDescription] = useState('');
+
   const [productCategory, setProductCategory] = useState('');
   const [photo1, setPhoto1] = useState(null);
   const [photo2, setPhoto2] = useState(null);
@@ -10,6 +17,10 @@ const AddProductForm = () => {
   const handleProductNameChange = (e) => {
     setProductName(e.target.value);
   };
+
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+  }
 
   const handleProductCategoryChange = (e) => {
     setProductCategory(e.target.value);
@@ -42,20 +53,22 @@ const AddProductForm = () => {
 
     // Example using FormData:
     const formData = new FormData();
-    formData.append('productName', productName);
-    formData.append('productCategory', productCategory);
+    formData.append('name', productName);
+    formData.append('categoryID', 1);
+    formData.append('description', description);
     formData.append('photo1', photo1);
     formData.append('photo2', photo2);
     formData.append('photo3', photo3);
+    axios
+    .post("APP_URL/api/create-product", formData)
+    .then(function (response) {
+      console.log("Successful response: ", response.data.id);
 
-    // Send formData to your API endpoint or perform further actions
-    // fetch('/api/addProduct', {
-    //   method: 'POST',
-    //   body: formData,
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.error('Error:', error));
+    })
+    .catch(function (error) {
+      console.log("Error response: ", error);
+    });
+
   };
 
   return (
@@ -76,6 +89,17 @@ const AddProductForm = () => {
               />
             </div>
             <div className="mb-3">
+              <label htmlFor="productName" className="form-label">Product Description</label>
+              <input
+                type="text"
+                className="form-control"
+                id="productName"
+                value={productName}
+                onChange={handleDescriptionChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
               <label htmlFor="productCategory" className="form-label">Product Category</label>
               <select
                 className="form-select"
@@ -85,9 +109,9 @@ const AddProductForm = () => {
                 required
               >
                 <option value="" disabled>Select Category</option>
-                <option value="electronics">Electronics</option>
-                <option value="clothing">Clothing</option>
-                <option value="accessories">Accessories</option>
+                <option value="branding">Branding</option>
+                <option value="printing">Printing</option>
+                <option value="designging">Desinging</option>
               </select>
             </div>
             <div className="mb-3">
