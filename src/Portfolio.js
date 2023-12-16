@@ -21,7 +21,7 @@ const Portfolio = () => {
   const allDesignings = useSelector((state) => state.designingLists);
 
 
-  const {brandingLoading, brandingError, branding } = allBrandings;
+  const { brandingLoading, brandingError, branding } = allBrandings;
 
   const { printingLoading, PrintingError, printing } = allPrintings;
 
@@ -37,15 +37,15 @@ const Portfolio = () => {
 
   if (printing.length && activeCategory === "printing") {
     allproperties = printing;
-  } else if(branding.length && activeCategory === "branding") {
+  } else if (branding.length && activeCategory === "branding") {
     allproperties = branding;
-  } else if(designing.length && activeCategory === "designing") {
+  } else if (designing.length && activeCategory === "designing") {
     allproperties = designing
   }
-  
+
   else {
     allproperties = properties;
-  }  
+  }
   useEffect(() => {
     dispatch(listProducts());
   }, []);
@@ -81,8 +81,10 @@ const Portfolio = () => {
                 data-wow-delay="0.1s"
               >
 
-                <div
-                  className="card shadow-lg bg-light rounded mb-4"
+               <div className="card-wrapper">
+
+               <div
+                  className="card shadow-lg bg-light rounded"
                   style={{
                     position: "relative",
                   }}
@@ -93,12 +95,23 @@ const Portfolio = () => {
                     alt={property.title}
                     style={{
                       objectFit: "cover",
+                      width: "100%",
+                      height: "100%",
                     }}
                     data-aos="zoom-in"
                   />
+
                   <div className="card-body">
+                    <h4>One-sided Engraving</h4>
+                    <p>Laser engrave your design on the front of the bottle.</p>
+                    <a href="#" className="card-link">
+                      Get in Touch
+                    </a>
                   </div>
                 </div>
+
+                </div>
+
 
               </div>
             ))}

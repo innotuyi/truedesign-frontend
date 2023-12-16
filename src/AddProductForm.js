@@ -1,18 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-
 import config from './config'
 
 const APP_URL = config.apiUrl
 
 const AddProductForm = () => {
+
+  const navigate = useNavigate();
+
+  const [categories, setCategory] = useState('');
+
   const [productName, setProductName] = useState('');
   const [description, setDescription] = useState('');
-
   const [productCategory, setProductCategory] = useState('');
   const [photo1, setPhoto1] = useState(null);
   const [photo2, setPhoto2] = useState(null);
   const [photo3, setPhoto3] = useState(null);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      const { data } = await axios.get(
+        `${APP_URL}/api/categories`
+      );
+      console.log("before state", data)
+      setCategory(data);
+      console.log("all catgories", categories)
+    }
+
+    fetchCategories();
+
+  }, []);
 
   const handleProductNameChange = (e) => {
     setProductName(e.target.value);
@@ -27,19 +45,16 @@ const AddProductForm = () => {
   };
 
   const handlePhoto1Change = (e) => {
-    // Handle file upload for photo1
     const file = e.target.files[0];
     setPhoto1(file);
   };
 
   const handlePhoto2Change = (e) => {
-    // Handle file upload for photo2
     const file = e.target.files[0];
     setPhoto2(file);
   };
 
   const handlePhoto3Change = (e) => {
-    // Handle file upload for photo3
     const file = e.target.files[0];
     setPhoto3(file);
   };
@@ -47,27 +62,21 @@ const AddProductForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform form submission or API call here
-    // Include the form data: productName, productCategory, photo1, photo2, photo3
-    // You can use FormData to send files along with other form data
-
-    // Example using FormData:
     const formData = new FormData();
     formData.append('name', productName);
-    formData.append('categoryID', 1);
+    formData.append('categoryID', productCategory);
     formData.append('description', description);
     formData.append('photo1', photo1);
     formData.append('photo2', photo2);
     formData.append('photo3', photo3);
     axios
-    .post("APP_URL/api/create-product", formData)
-    .then(function (response) {
-      console.log("Successful response: ", response.data.id);
-
-    })
-    .catch(function (error) {
-      console.log("Error response: ", error);
-    });
+      .post(`${APP_URL}/api/create-product`, formData)
+      .then(function (response) {
+        navigate('/productList');
+      })
+      .catch(function (error) {
+        console.log("Error response: ", error);
+      });
 
   };
 
@@ -94,7 +103,7 @@ const AddProductForm = () => {
                 type="text"
                 className="form-control"
                 id="productName"
-                value={productName}
+                value={description}
                 onChange={handleDescriptionChange}
                 required
               />
@@ -109,9 +118,16 @@ const AddProductForm = () => {
                 required
               >
                 <option value="" disabled>Select Category</option>
-                <option value="branding">Branding</option>
-                <option value="printing">Printing</option>
-                <option value="designging">Desinging</option>
+                {Array.isArray(categories) &&
+                  categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name}
+                    </option>
+                  ))}
+
+
+
+
               </select>
             </div>
             <div className="mb-3">
