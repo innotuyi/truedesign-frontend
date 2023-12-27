@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -40,12 +41,16 @@ const Footer = () => {
               </div>
               <div class="col-md-6 col-lg-4">
                 <h5 class="text-white mb-4">Popular Link</h5>
-                <a class="btn btn-link" href="">
+               <NavLink to="/about">
+               <a class="btn btn-link">
                   About Us
                 </a>
+               </NavLink>
+                <NavLink to="/contact">
                 <a class="btn btn-link" href="">
                   Contact Us
                 </a>
+                </NavLink>
               </div>
               <div class="col-md-6 col-lg-4">
                 <h5 class="text-white mb-4">Project Gallery</h5>
@@ -53,43 +58,67 @@ const Footer = () => {
                   <div class="col-4">
                     <img
                       class="img-fluid"
-                      src="img/portfolio-1.jpg"
-                      alt="Image"
+                      src="img/1.jpeg"
+                      alt="Image"  style={{
+                      objectFit: "cover",
+                      width: "80%",
+                      height: "80%",
+                    }}
                     />
                   </div>
                   <div class="col-4">
                     <img
                       class="img-fluid"
-                      src="img/portfolio-2.jpg"
-                      alt="Image"
+                      src="img/2.jpeg"
+                      alt="Image"  style={{
+                      objectFit: "cover",
+                      width: "80%",
+                      height: "80%",
+                    }}
                     />
                   </div>
                   <div class="col-4">
                     <img
                       class="img-fluid"
-                      src="img/portfolio-3.jpg"
-                      alt="Image"
+                      src="img/3.jpeg"
+                      alt="Image"  style={{
+                      objectFit: "cover",
+                      width: "80%",
+                      height: "80%",
+                    }}
                     />
                   </div>
                   <div class="col-4">
                     <img
                       class="img-fluid"
-                      src="img/portfolio-4.jpg"
-                      alt="Image"
+                      src="img/4.jpeg"
+                      alt="Image"  style={{
+                      objectFit: "cover",
+                      width: "80%",
+                      height: "80%",
+                    }}
                     />
                   </div>
                   <div class="col-4">
                     <img
                       class="img-fluid"
-                      src="img/portfolio-5.jpg"
-                      alt="Image"
+                      src="img/5.jpeg"
+                      alt="Image"  style={{
+                      objectFit: "cover",
+                      width: "80%",
+                      height: "80%",
+                    }}
                     />
                   </div>
                   <div class="col-4">
                     <img
                       class="img-fluid"
-                      src="img/portfolio-6.jpg"
-                      alt="Image"
+                      src="img/6.jpeg"
+                      alt="Image"  style={{
+                      objectFit: "cover",
+                      width: "80%",
+                      height: "80%",
+                    }}
                     />
                   </div>
                 </div>

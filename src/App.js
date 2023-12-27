@@ -1,5 +1,7 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import Home from "./Home";
 import Service from './Service'
@@ -15,6 +17,7 @@ import MessagePage from './MessagePage'
 import LoginPage from './LoginPage'
 import RegisterPage from './RegisterPage'
 import PaymentProcess from './PaymentProcess'
+import UpdateProductScreen from './UpdateProductScreen'
 function App() {
   return (
     <>
@@ -34,6 +37,8 @@ function App() {
           <Route path="login" element ={<LoginPage/>} />
           <Route path="register" element ={<RegisterPage/>} />
           <Route path="payment" element ={<PaymentProcess/>} />
+          <Route path="update/:id" element ={<UpdateProductScreen/>} />
+
 
 
 

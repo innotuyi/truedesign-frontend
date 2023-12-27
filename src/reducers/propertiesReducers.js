@@ -3,6 +3,11 @@ import {
     PRODUCT_SUCCESS,
     PRODUCT_FAIL,
 
+    
+    PROPERTY_DETAILS_REQUEST,
+    PROPERTY_DETAILS_SUCCESS,
+    PROPERTY_DETAILS_FAIL,
+
     PRINTING_REQUEST,
     PRINTING_SUCCESS,
     PRINTING_FAIL,
@@ -34,6 +39,24 @@ import {
         return state;
     }
   };
+
+
+  export const propertiesDetailsReducer = (state = { property: [] }, action) => {
+    switch (action.type) {
+      case PROPERTY_DETAILS_REQUEST:
+        return { loading: true, property: [] };
+  
+      case PROPERTY_DETAILS_SUCCESS:
+        return { loading: false,property: action.payload };
+  
+      case PROPERTY_DETAILS_FAIL:
+        return { loading: false, error: action.payload };
+  
+      default:
+        return state;
+    }
+  };
+
 
 
   export const printingFilterReducer = (state = { printing: [] }, action) => {

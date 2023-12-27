@@ -1,8 +1,8 @@
 // src/config.js
 
 const config = {
-    apiUrl: "https://phplaravel-1182995-4153897.cloudwaysapps.com",
-    imgUrl:"https://phplaravel-1182995-4153897.cloudwaysapps.com/storage/"
+    apiUrl: "http://127.0.0.1:8000",
+    imgUrl:"http://127.0.0.1:8000/storage/"
   };
   
   export default config;

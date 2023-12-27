@@ -1,6 +1,10 @@
 import React , {useState, useEffect}from 'react'
 import axios from 'axios'
 
+import config from './config'
+
+const APP_URL = config.apiUrl
+
 const Statistics = () => {
 
 
@@ -20,13 +24,13 @@ useEffect(  ()=>{
   async function propertyCount() {
     try {
 
-      const {data} = await axios.get("http://127.0.0.1:8000/api/property/statistics");
+      const {data} = await axios.get(`${APP_URL}/api/allProducts`);
 
       if(data) {
 
-        setPropertyCount(data[0].total)
+        setPropertyCount(data)
 
-        console.log("count", count)
+        console.log("count", data)
       }
       
     } catch (error) {
@@ -45,13 +49,13 @@ useEffect(  ()=>{
   async function getforsale() {
     try {
 
-      const {data} = await axios.get("http://127.0.0.1:8000/api/property/statistics");
+      const {data} = await axios.get(`${APP_URL}/api/allContacts`);
 
       if(data) {
 
-        setForSale(data[0].total)
+        setForSale(data[0])
 
-        console.log("ForSalae", forsale)
+        console.log("ForSalae", data)
       }
       
     } catch (error) {
@@ -70,13 +74,13 @@ useEffect(  ()=>{
   async function getforrent() {
     try {
 
-      const {data} = await axios.get("http://127.0.0.1:8000/api/forsale/statistics");
+      const {data} = await axios.get(`${APP_URL}/api/allContacts`);
 
       if(data) {
 
-        setforRent(data[0].total)
+        setforRent(data)
 
-        console.log("forrent", forRent)
+        console.log("forrent", data)
       }
       
     } catch (error) {
@@ -96,13 +100,13 @@ useEffect(  ()=>{
   async function getAllMessageCount() {
     try {
 
-      const {data} = await axios.get("http://127.0.0.1:8000/api/message/statistics");
+      const {data} = await axios.get(`${APP_URL}/api/allContacts`);
 
       if(data) {
 
-        setMessagecount(data[0].total)
+        setMessagecount(data[0])
 
-        console.log("Messagecount", messagesCount)
+        console.log("Messagecount", data)
       }
       
     } catch (error) {
@@ -123,7 +127,7 @@ useEffect(  ()=>{
   async function getAllMessage() {
     try {
 
-      const response = await axios.get("http://127.0.0.1:8000/api/get-request");
+      const response = await axios.get(`${APP_URL}/api/allContacts`);
       
 
       if(response) {

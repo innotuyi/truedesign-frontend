@@ -4,6 +4,7 @@ import { composeWithDevTools } from "@redux-devtools/extension";
 
 import {
     propertiesListReducer,
+    propertiesDetailsReducer,
     printingFilterReducer,
     brandingFilterReducer,
     designingFilterReducer
@@ -16,6 +17,7 @@ import {
 
 const reducer = combineReducers({
     propertyLists: propertiesListReducer,
+    propertyDetails: propertiesDetailsReducer,
     printingLists:printingFilterReducer,
     brandingLists:brandingFilterReducer,
     designingLists:designingFilterReducer,

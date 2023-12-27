@@ -30,12 +30,7 @@ const Sidebar = () => {
        <i class="fa fa-envelope me-3"></i> <a to="/messages">Messages</a>
        </NavLink>
         </li>
-        <li>
-            <NavLink>
-            <i class="fa fa-envelope me-3"></i> <a to="/dashboard">Statistics</a>
-
-            </NavLink>
-        </li>
+       
         <li>
             <NavLink>
             <i class="fa fa-envelope me-3"></i> <a>Logout</a>

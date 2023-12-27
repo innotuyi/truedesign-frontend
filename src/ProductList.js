@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import config from './config'
 import Sidebar from './Sidebar'
 import axios from 'axios'
 
 const ProductList = () => {
   const APP_URL = config.apiUrl
-  const imageUrl =config.imgUrl;
+  const imageUrl = config.imgUrl;
+  const navigate = useNavigate();
 
   const [productList, setProductList] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,6 +26,12 @@ const ProductList = () => {
     fetchProducts();
 
   }, []);
+
+
+  const showEditForm  = (id) => {
+    navigate(`/update/${id}`);
+  };
+
 
 
   // Handle search term changes
@@ -48,7 +56,7 @@ const ProductList = () => {
             <div className="card m-4 border-0 shadow statistics">
               <div className="card-body">
                 <h3 className="mb-4">Product List</h3>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <input
                     type="text"
                     className="form-control"
@@ -56,12 +64,13 @@ const ProductList = () => {
                     value={searchTerm}
                     onChange={handleSearch}
                   />
-                </div>
+                </div> */}
                 <table className="table table-bordered">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Product Name</th>
+                      <th scope="col">Description</th>
                       <th scope="col">Category</th>
                       <th scope="col">Photo 1</th>
                       <th scope="col">Photo 2</th>
@@ -74,7 +83,8 @@ const ProductList = () => {
                       <tr key={index}>
                         <th scope="row">{product.id}</th>
                         <td>{product.name}</td>
-                        <td>{product.categoryID}</td>
+                        <td>{product.description}</td>
+                        <td>{product.category_name}</td>
                         <td>
                           <img src={imageUrl + product.photo1} alt="Photo 1" className="img-thumbnail" width="40px" height="40px" />
                         </td>
@@ -85,8 +95,13 @@ const ProductList = () => {
                           <img src={imageUrl + product.photo3} alt="Photo 3" className="img-thumbnail" width="40px" height="40px" />
                         </td>
                         <td>
-                          {/* Add any action buttons or links for each item */}
-                          <button className="btn btn-danger">Delete</button>
+                            <button className="btn btn-primary"
+                            
+                            onClick={(e) => showEditForm(product.id)}
+
+                            
+                            >Edit</button>
+
                         </td>
                       </tr>
                     ))}

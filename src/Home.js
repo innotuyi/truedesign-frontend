@@ -4,47 +4,19 @@ import About from './About'
 import NewsLetter from './NewsLetter'
 import Service from './Service'
 import Portfolio from './Portfolio'
-import Testimonial from './Testmonial'
-import Team from './Team'
 import Footer from './Footer'
+import ClientPage from './ClientPage'
 const Home = () => {
   return (
     <>
       <div class="container-xxl bg-white p-0">
       
 
-        {/* <!-- Navbar & Hero Start --> */}
        <Nav/>
-        {/* <!-- Navbar & Hero End --> */}
-        {/* <!-- Full Screen Search Start --> */}
-      
-        {/* <!-- Full Screen Search End -->
-        <!-- About Start --> */}
-        {/* <!-- About End --> */}
-
-        {/* <!-- Newsletter Start --> */}        
-        {/* <!-- Newsletter End -->
-        <!-- Service Start --> */}
-
-        {/* <Service/> */}
-        
-        {/* <!-- Service End -->
-        <!-- Portfolio Start --> */}
-
         <Portfolio/> 
+        <ClientPage/>
         
-        {/* <!-- Portfolio End -->
-
-
-        <!-- Testimonial Start --> */}      
-        {/* <!-- Testimonial End -->
-
-
-        <!-- Team Start --> */}
-      
-        {/* <!-- Team End --> */}
-
-        {/* <!-- Footer Start --> */}
+     
         
         <Footer/>
         <a

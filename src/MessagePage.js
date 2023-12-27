@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar'
+import config from './config'
+import axios from 'axios'
+
+const   APP_URL = config.apiUrl
 
 const MessagesPage = () => {
   const [messages, setMessages] = useState([]);
 
-  // Assume your API endpoint for fetching messages is /api/getMessages
-  const fetchMessages = async () => {
-    try {
-      const response = await fetch('/api/getMessages');
-      const data = await response.json();
-      setMessages(data); // Assuming the API returns an array of message items
-    } catch (error) {
-      console.error('Error fetching messages:', error);
-    }
-  };
-
   useEffect(() => {
-    // Fetch messages when the component mounts
-    fetchMessages();
+    async function fetchProducts() {
+      const { data } = await axios.get(
+        `${APP_URL}/api/contacts`
+      );
+      console.log("before state", data)
+      setMessages(data);
+      console.log("all store properties", messages)
+    }
+
+    fetchProducts();
+
   }, []);
 
   return (
@@ -30,9 +32,11 @@ const MessagesPage = () => {
           <ul className="list-group">
             {messages.map((message, index) => (
               <li key={index} className="list-group-item mb-3">
-                <h5 className="mb-2">{message.name}</h5>
+                <h5 className="mb-2 text-bold">Name:{message.name}</h5>
                 <p className="mb-2">Email: {message.email}</p>
                 <p className="mb-2">Subject: {message.subject}</p>
+                <p className="mb-2">Message: {message.message}</p>
+
                 <p>{message.message}</p>
               </li>
             ))}

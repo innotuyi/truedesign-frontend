@@ -1,13 +1,43 @@
 import React, { useEffect } from "react";
 import { listProducts } from './actions/productAction'
 import { printingFilter } from './actions/productFilterAction'
-import { useDispatch, useSelector } from "react-redux";
 import config from './config'
+import Logo from "./image/lOGO.png";
+
+
+import { NavLink, Outlet } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { brandingFilter, designingFilter} from './actions/productFilterAction'
+
+import { PRINTING, DESIGNING, BRANDING, FOR_RENT, FOR_SALE, LATEST } from "./actions/types";
+
 let allproperties = [];
 
 
 
 const Portfolio = () => {
+
+
+  function handlePrinting() {
+    dispatch({ type: PRINTING });
+    dispatch(printingFilter());
+
+  }
+  function handleBranding() {
+    dispatch({ type: BRANDING });
+    dispatch(brandingFilter());
+
+  }
+
+  function handleDesigning() {
+    dispatch({ type: DESIGNING });
+    dispatch(designingFilter());
+
+  }
+
+
+
+
   const dispatch = useDispatch();
 
   const { activeCategory } = useSelector((state) => state.activeCategory);
@@ -52,17 +82,19 @@ const Portfolio = () => {
 
   return (
     <>
-      <div class="container-xxl py-5">
+      <div class="container-xxl mt-5 pt-5">
+        
         <div class="container px-lg-5">
           <div
             class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp"
             data-wow-delay="0.1s"
           >
-            <h6 class="position-relative d-inline text-primary ps-4">
-              Our Projects
-            </h6>
-            <h2 class="mt-2">Recently Launched Projects</h2>
+            <hr/>
+            <h2 class="pt-5">Recently  Products</h2>
           </div>
+
+       
+
           <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-12 text-center">
               <ul class="list-inline mb-5" id="portfolio-flters">
