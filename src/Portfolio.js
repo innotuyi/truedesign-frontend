@@ -137,7 +137,7 @@ const Portfolio = () => {
                     <h4>One-sided Engraving</h4>
                     <p>Laser engrave your design on the front of the bottle.</p>
                     <a href="#" className="card-link">
-                      Get in Touch
+                      Add to Cart
                     </a>
                   </div>
                 </div>

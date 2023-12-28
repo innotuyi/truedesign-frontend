@@ -8,6 +8,14 @@ import five from './Logo/5.png'
 import six from './Logo/6.png'
 import seven from './Logo/7.png'
 
+import eight from './Logo/8.png'
+
+import nine from './Logo/9.jpg'
+
+import ten from './Logo/10.jpg'
+
+
+
 
 const ClientPage = () => {
   return (
@@ -35,6 +43,15 @@ const ClientPage = () => {
 
         <div className="logo-item">
           <img src={seven} alt="Company Logo 4" />
+        </div>
+        <div className="logo-item">
+          <img src={eight} alt="Company Logo 4" />
+        </div>
+        <div className="logo-item">
+          <img src={nine} alt="Company Logo 4" />
+        </div>
+        <div className="logo-item">
+          <img src={ten} alt="Company Logo 4" />
         </div>
       </div>
     </div>

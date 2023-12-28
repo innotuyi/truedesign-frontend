@@ -6,6 +6,7 @@ import Service from './Service'
 import Portfolio from './Portfolio'
 import Footer from './Footer'
 import ClientPage from './ClientPage'
+import LargeImage from './LargeImage'
 const Home = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const Home = () => {
        <Nav/>
         <Portfolio/> 
         <ClientPage/>
+        <LargeImage/>
         
      
         
