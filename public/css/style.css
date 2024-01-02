@@ -1,14 +1,16 @@
 /********** Template CSS **********/
 :root {
-    --primary:##2E98D4
+    --primary:yellow
     --secondary: #4777F5;
     --light: #F7FAFF;
-    --dark: #1D1D27;
+    --dark: #001861;
 }
 
 .bg-secondary {
 
-    background-color: var(--primary);
+    background-color: var(--dark) !important;
+
+    height: 75vh !important;
 
 
 }

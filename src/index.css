@@ -14,7 +14,7 @@ code {
 
 .card >img {
   width: 330px !important;
-  height: 330px !important;
+  height: 200px !important;
 }
 .card-link {
   color: #3498db;
@@ -93,4 +93,9 @@ ul >li {
   font-weight: #fff;
 
    
+}
+
+.nav-link {
+
+  margin-right: 1rem;
 }

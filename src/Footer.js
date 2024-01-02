@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
      <div
-          class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn"
+          class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn"
           data-wow-delay="0.1s"
         >
           <div class="container py-5 px-lg-5">

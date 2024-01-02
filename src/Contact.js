@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Nav2 from './Nav2';
+import Nav from './Nav';
 import Footer from './Footer';
 import axios from 'axios'
 import config from './config'
@@ -39,7 +39,7 @@ const Contact = () => {
   }
   return (
     <>
-      <Nav2 page="Contact" />
+      <Nav/>
       <div className="container-xxl py-5">
         <div className="container px-lg-5">
           <div className="row justify-content-center">

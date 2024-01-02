@@ -7,6 +7,8 @@ import Portfolio from './Portfolio'
 import Footer from './Footer'
 import ClientPage from './ClientPage'
 import LargeImage from './LargeImage'
+import CourseCarousel from './CourseCarousel'
+
 const Home = () => {
   return (
     <>
@@ -14,6 +16,14 @@ const Home = () => {
       
 
        <Nav/>
+       
+       <div class="mt-2 bg-light">
+           
+
+           <CourseCarousel/>
+
+           
+         </div>
         <Portfolio/> 
         <ClientPage/>
         <LargeImage/>

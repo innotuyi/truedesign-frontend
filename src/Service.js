@@ -7,7 +7,7 @@ import Nav2 from './Nav2'
 const Service = () => {
   return (
     <>
-    <Nav2 page="Service"/>
+    <Nav/>
       <div class="container-xxl py-5">
           <div class="container px-lg-5">
             <div

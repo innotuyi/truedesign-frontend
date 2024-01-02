@@ -46,7 +46,7 @@ const Nav = () => {
             <div class="navbar-nav ms-auto py-0">
               <NavLink to='/'>
                 <a class="nav-item nav-link active">
-                  Home
+                
                 </a>
 
               </NavLink>
@@ -85,11 +85,11 @@ const Nav = () => {
                 </NavLink>
 
               </div>
-              {/* <NavLink to="/service">
+              <NavLink to="/service">
                 <a class="nav-item nav-link">
-                  Service
+                  Product & Services
                 </a>
-              </NavLink> */}
+              </NavLink>
               <NavLink to="/about">
                 <a class="nav-item nav-link">
                   About
@@ -107,17 +107,6 @@ const Nav = () => {
         <div class=" py-5 bg-secondary hero-header ">
         <Header/>
 
-          <div class="mt-2 bg-light">
-            {/* <div class="row g-5 py-5 mt-2">
-              <div class="col-lg-6 offset-md-2 colo text-center text-lg-start">
-               
-              </div>
-            </div> */}
-
-            <CourseCarousel/>
-
-            
-          </div>
         </div>
       </div>
     </>

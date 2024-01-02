@@ -19,9 +19,12 @@ import ten from './Logo/10.jpg'
 
 const ClientPage = () => {
   return (
-    <div className="client-page mt-4">
-      <h2>Our Valued Clients</h2>
-      <div className="logo-gallery">
+    <div className="client-page mt-4 mb-5">
+      <h4 style={{
+        color:"gray"
+      }}>Trusted by These Great Brands:
+</h4>
+      <div className="logo-gallery mt-5">
         <div className="logo-item">
           <img src={one} alt="Company Logo 1" />
         </div>

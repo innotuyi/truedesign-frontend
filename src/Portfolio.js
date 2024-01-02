@@ -3,8 +3,7 @@ import { listProducts } from './actions/productAction'
 import { printingFilter } from './actions/productFilterAction'
 import config from './config'
 import Logo from "./image/lOGO.png";
-
-
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import { NavLink, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { brandingFilter, designingFilter} from './actions/productFilterAction'
@@ -90,18 +89,13 @@ const Portfolio = () => {
             data-wow-delay="0.1s"
           >
             <hr/>
-            <h2 class="pt-5">Recently  Products</h2>
+            <h4 class="pt-5">Recently  Products</h4>
           </div>
 
        
 
           <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-12 text-center">
-              <ul class="list-inline mb-5" id="portfolio-flters">
-                <li class="btn px-3 pe-4 active" data-filter="*">
-                  All
-                </li>
-              </ul>
             </div>
           </div>
           <div class="row g-4 portfolio-container">
@@ -136,9 +130,17 @@ const Portfolio = () => {
                   <div className="card-body">
                     <h4>One-sided Engraving</h4>
                     <p>Laser engrave your design on the front of the bottle.</p>
-                    <a href="#" className="card-link">
+                    {/* <a href="#" className="card-link">
                       Add to Cart
-                    </a>
+                    </a> */}
+                    <FloatingWhatsApp
+                     phoneNumber="+250785530789" 
+                     accountName	="True Design Ltd"
+                      avatar={Logo}
+                      chatMessage="Muraho! 🤝
+                      Nigute twabafash?"
+                      />
+
                   </div>
                 </div>
 

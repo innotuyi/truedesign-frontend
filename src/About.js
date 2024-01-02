@@ -1,11 +1,11 @@
 import React from "react";
 import Image1 from './image/1.webp'
 import Footer from './Footer'
-import Nav2 from './Nav2'
+import Nav from './Nav'
 const About = () => {
   return (
     <>
-    <Nav2 page="About"/>
+    <Nav/>
       <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div class="row g-5">
