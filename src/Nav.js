@@ -52,7 +52,7 @@ const Nav = () => {
               </NavLink>
 
               <div class="nav-item">
-                <NavLink>
+                <NavLink to="/">
                   <a
                     class="nav-link"
                     onClick={handleDesigning}
@@ -64,7 +64,7 @@ const Nav = () => {
               </div>
 
               <div class="nav-item">
-                <NavLink>
+                <NavLink to="/">
                   <a
                     href="#"
                     class="nav-link"
@@ -76,7 +76,7 @@ const Nav = () => {
               </div>
               <div class="nav-item">
 
-                <NavLink>
+                <NavLink to="/">
                   <a class="nav-link"
                     onClick={handleBranding}
                   >

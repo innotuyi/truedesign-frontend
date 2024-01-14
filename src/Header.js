@@ -1,5 +1,7 @@
 import React from 'react';
-import Logo from "./image/lOGO.png";
+import Logo from "./image/logo.svg";
+import { NavLink } from "react-router-dom";
+
 const Header = () => {
   return (
     <div>
@@ -9,7 +11,7 @@ const Header = () => {
             <img src={Logo} style={{
 
               height: "200px",
-              width: "350px"
+              width: "200px"
             }}
               alt="Logo" className="img-fluid" />
           </a>
@@ -23,6 +25,10 @@ const Header = () => {
             <div className='text-light'>Phone: +123 456 789</div>
             <div className='text-light'>Email: your@email.com</div>
           </span>
+        </div>
+
+        <div>
+          <a href='' className='btn btn-danger btn-lg'>Place Your Order</a>
         </div>
       </div>
 
@@ -44,55 +50,86 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
-                  Posters
-                </a>
-                <a className="dropdown-item" href="#">
-                  Brochures
-                </a>
-                <a className="dropdown-item" href="#">
-                  Flyers
-                </a>
-                <a className="dropdown-item" href="#">
-                  Stickers
-                </a>
-                <a className="dropdown-item" href="#">
-                  LetterHeads
-                </a>
-                <a className="dropdown-item" href="#">
-                  Magazines
-                </a>
-                <a className="dropdown-item" href="#">
-                  Business Cards
-                </a>
-                <a className="dropdown-item" href="#">
-                  Calendars
-
-                </a>
-                <a className="dropdown-item" href="#">
-                  Folders
-                </a>
-                <a className="dropdown-item" href="#">
-                  Annual Reports
-                </a>
-                <a className="dropdown-item" href="#">
-                  Invitations
-                </a>
-                <a className="dropdown-item" href="#">
-                  Newletters
-                </a>
-                <a className="dropdown-item" href="#">
-                  NoteBooks
-                </a>
-                <a className="dropdown-item" href="#">
-                  Diaries
-                </a>
-                <a className="dropdown-item" href="#">
-                  Id Cardds
-                </a>
-                <a className="dropdown-item" href="#">
-                  Envelopes
-                </a>
+                <NavLink to="/poster">
+                  <a class="nav-item nav-link">
+                    Poster
+                  </a>
+                </NavLink>
+                <NavLink to="/bronchures">
+                  <a class="nav-item nav-link">
+                    Bronchures
+                  </a>
+                </NavLink>
+                <NavLink to="/flyer">
+                  <a class="nav-item nav-link">
+                    Flyer
+                  </a>
+                </NavLink>
+                <NavLink to="/sticker">
+                  <a class="nav-item nav-link">
+                    Stickers
+                  </a>
+                </NavLink>
+                <NavLink to="/letterheads">
+                  <a class="nav-item nav-link">
+                    LetterHeads
+                  </a>
+                </NavLink>
+                <NavLink to="/magazine">
+                  <a class="nav-item nav-link">
+                    Magazines
+                  </a>
+                </NavLink>
+                <NavLink to="/business">
+                  <a class="nav-item nav-link">
+                    BusinessCard
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Calendars
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Folders
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Annual Reports
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Invitations
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    News letter
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    NoteBooks
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Diaries
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Id cards
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    Enviropes
+                  </a>
+                </NavLink>
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -109,32 +146,55 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
-                  Banner(Rollup & tear Drop)
-                </a>
-                <a className="dropdown-item" href="#">
-                  Backlit
-                </a>
-                <a className="dropdown-item" href="#">
-                  Reflective Stickers
-                </a>
-                <a className="dropdown-item" href="#">
-                  PVC Stickers
-                </a>
-                <a className="dropdown-item" href="#">
-                  Contravision                </a>
-                <a className="dropdown-item" href="#">
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                    Banner(Rollup & tear Drop)
+                  </a>
+                </NavLink>
+                <NavLink to="/backlit">
+                  <a class="nav-item nav-link">
+                    BackLit
+                  </a>
+                </NavLink>
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                    Reflective Stickers
+                  </a>
+                </NavLink>
+
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                    PVC Stickers
+                  </a>
+                </NavLink>
+                <NavLink to="/calendar">
+                  <a class="nav-item nav-link">
+                    PVC Stickers
+                  </a>
+                </NavLink>
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                    Contravision                 </a>
+                </NavLink>
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Wall Papers
                 </a>
-                <a className="dropdown-item" href="#">
+                </NavLink>
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   GazeBo(Tent)                </a>
-                <a className="dropdown-item" href="#">
+                </NavLink>
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Whell Covers
-
                 </a>
-                <a className="dropdown-item" href="#">
-                  Frost Stickers
+                </NavLink>
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Frost Stickers        
                 </a>
+                </NavLink>
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -151,20 +211,31 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   T-Shirts
                 </a>
-                <a className="dropdown-item" href="#">
-                  Cups
-                </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+             
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Unmbrellas
+
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Overalls
+
                 </a>
-                <a className="dropdown-item" href="#">
-                  Uniforms                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Uniforms
+
+                </a>
+              </NavLink>
+               
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -181,18 +252,31 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Exhibition Booth
+
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Office Interior
+
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Direction And Door Signs
+
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Car Branding
                 </a>
+              </NavLink>
+              
 
               </div>
             </li>
@@ -211,24 +295,36 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Illuminated signs
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Directional Signs
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   3D Signs
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Street Signs
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Billboards
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Safety Signs
                 </a>
+              </NavLink>
 
               </div>
             </li>
@@ -243,24 +339,37 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Web Design              </a>
+                Web Design             
+                 </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   E-commerce Website
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Business Website
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Portifolion Website
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Entertainment Website
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Domain and Email
                 </a>
+              </NavLink>
+  
+                
               </div>
             </li>
 
@@ -274,27 +383,44 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-               Promotional Items              </a>
+                Promotional Items              </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Executive Pens
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Mugs
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Table Talkers
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Acrylic Table Talkers
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Executive Key Rings
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Mugs
+                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Submission Travel Mug
                 </a>
+              </NavLink>
               </div>
             </li>
 
@@ -308,33 +434,47 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-               Photos and Videos              </a>
+                Photos and Videos              </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Wedding
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Birthday
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Corporate
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Products
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Music
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Adverts
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>  
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Documentaries
                 </a>
+              </NavLink>
               </div>
             </li>
-            
+
 
           </ul>
         </div>
@@ -344,6 +484,8 @@ const Header = () => {
         <div className="container-fluid">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
+
+              
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -357,14 +499,22 @@ const Header = () => {
               </a>
               {/* Dropdown Menu for AUDIO VISUAL */}
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-                <a className="dropdown-item" href="#">
-                  Documentatary videos
-
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Documentary videos
                 </a>
-                <a className="dropdown-item" href="#">
-                  Photography               </a>
-                <a className="dropdown-item" href="#">
-                  Motion graphics                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Photography
+                </a>
+              </NavLink>
+                
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Motion Graphics
+                </a>
+              </NavLink>
 
               </div>
             </li>
@@ -381,80 +531,82 @@ const Header = () => {
               >
                 Designing  &  Branding
               </a>
-              {/* Dropdown Menu for AUDIO VISUAL */}
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-                <a className="dropdown-item" href="#">
-                  3 D printing & Lighting
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  3D Printing And Lighting
                 </a>
-                <a className="dropdown-item" href="#">
-
-
-                  Cartons/ Boxes                </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Cartons / Boxes
+                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Umbrella
                 </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>               
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Hats
                 </a>
-                <a className="dropdown-item" href="#">
-
-                  Waterbottle Branding
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  WaterBottle Branding
                 </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Diaries/Agenda
-
                 </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   T-shirts
-
                 </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Hats
                 </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Rain Coats
-
                 </a>
-                <a className="dropdown-item" href="#">
-
-                  Refective jackets
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Reflective Jackets
                 </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Office Designing
-
                 </a>
-                <a className="dropdown-item" href="#">
-
-                  Flyers Designing and printing
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Flyers DEsigning and Printing
                 </a>
-                <a className="dropdown-item" href="#">
-
-                  Books designing
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Books Designing
                 </a>
-                <a className="dropdown-item" href="#">
-
-                  websidte designing
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Apps Developing
                 </a>
-                <a className="dropdown-item" href="#">
-
-                  Apps developing
-
-                </a>
-                <a className="dropdown-item" href="#">
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Hermets
-
                 </a>
+              </NavLink>
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -471,100 +623,130 @@ const Header = () => {
               </a>
               {/* Dropdown Menu for AUDIO VISUAL */}
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-                <a className="dropdown-item" href="#">
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Large Format Printing
-
-
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Promotional materials
                 </a>
-                <a className="dropdown-item" href="#">
-                  Gift bags
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Gift Bags
                 </a>
-                <a className="dropdown-item" href="#">
-                  Calenders
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Promotional materials
                 </a>
-                <a className="dropdown-item" href="#">
-                  Back drop
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Calendars
                 </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Back Drop
+                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Notepads
                 </a>
-                <a className="dropdown-item" href="#">
-                  Folders
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Folders
                 </a>
-                <a className="dropdown-item" href="#">
-                  Brochures
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Bronchures
+                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Blocknotes
+                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Nametags
+                </a>
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Big EVents Banners
+                </a>
+              </NavLink>
 
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  T-Shirts
                 </a>
-                <a className="dropdown-item" href="#">
-                  Blocknotes
-                </a>
-                <a className="dropdown-item" href="#">
-                  Nametags
-                </a>
-                <a className="dropdown-item" href="#">
-                  Big events banners
-                </a>
-                <a className="dropdown-item" href="#">
-                  T-shirts
-
-                </a>
-                <a className="dropdown-item" href="#">
-                  Notepads
-                </a>
-                <a className="dropdown-item" href="#">
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Rain Coat
-
                 </a>
-                <a className="dropdown-item" href="#">
-                  Refective jackets
-
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Promotional materials
                 </a>
+              </NavLink>
                 <a className="dropdown-item" href="#">
                   OverAll
 
 
                 </a>
-                <a className="dropdown-item" href="#">
-                  Hats
-
-
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Hats
                 </a>
+              </NavLink>
                 <a className="dropdown-item" href="#">
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Banners
+                </a>
+              </NavLink>
 
                 </a>
-                <a className="dropdown-item" href="#">
+                <NavLink to="/banner">
+                  <a class="nav-item nav-link">
                   Books
-
                 </a>
-                <a className="dropdown-item" href="#">
-                  Pull ups
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Pull ups
                 </a>
-                <a className="dropdown-item" href="#">
-                  Flyers
-
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Flyers
                 </a>
-                <a className="dropdown-item" href="#">
-                  Menu
-
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Menu
                 </a>
-                <a className="dropdown-item" href="#">
-                  Business cards
-
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Business Cards
                 </a>
-                <a className="dropdown-item" href="#">
-                  Cartons/ Boxes
-
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Cartons/Boxes
                 </a>
+              </NavLink>
 
                 {/* Add more dropdown links as needed */}
               </div>
@@ -580,18 +762,22 @@ const Header = () => {
                 aria-expanded="false"
               >
                 Event branding              </a>
-              {/* Dropdown Menu for AUDIO VISUAL */}
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-                <a className="dropdown-item" href="#">
-                  Back drop
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Back Drop
                 </a>
-                <a className="dropdown-item" href="#">
-                  Conference bags
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Conference Bags
                 </a>
-                <a className="dropdown-item" href="#">
-                  T-shirts
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 T-shirts
                 </a>
+              </NavLink>
               </div>
             </li>
 
@@ -609,17 +795,22 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
-                  DOCUMENTARY VIDEOS
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Documentary Videos
                 </a>
-                <a className="dropdown-item" href="#">
-                  PHOTOGRAPHY
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Photography
                 </a>
-                <a className="dropdown-item" href="#">
-                  Motion graphics
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Motion Graphics
                 </a>
-
-                {/* Add more dropdown links as needed */}
+              </NavLink>
+             
               </div>
             </li>
 
@@ -637,14 +828,16 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
-                  Companies contracts/Files
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Companies Contracts/Files
                 </a>
-                <a className="dropdown-item" href="#">
-                  Video Translting                </a>
-
-
-                {/* Add more dropdown links as needed */}
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Video Translting
+                </a>
+              </NavLink>
               </div>
             </li>
 
@@ -661,48 +854,65 @@ const Header = () => {
                 E-procurement   & Proffessional services              </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-                <a className="dropdown-item" href="#">
-                  E-tendering process training
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  E-tendering Process Training
                 </a>
-                <a className="dropdown-item" href="#">
-                  QuickBooks Training
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  QuickBooks Trainging
                 </a>
-                <a className="dropdown-item" href="#">
-                  Tax declaration training
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Tax Declaration Training
                 </a>
-                <a className="dropdown-item" href="#">
-                  Concept note developing
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Concept Note Developing
                 </a>
-                <a className="dropdown-item" href="#">
-                  Business plan
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Business Plan
                 </a>
-                <a className="dropdown-item" href="#">
-                  Strategic planning
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Strategic Planning
                 </a>
-                <a className="dropdown-item" href="#">
-                  Financial analysis
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                  Financial Analysis
                 </a>
-                <a className="dropdown-item" href="#">
-                  EBM Using training
-
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 EBM Using Training 
                 </a>
-                <a className="dropdown-item" href="#">
-                  Business advisory
+              </NavLink>
+              <NavLink to="/banner">
+                  <a class="nav-item nav-link">
+                 Business Advisory
                 </a>
+              </NavLink>
               </div>
             </li>
-            
+
 
           </ul>
         </div>
       </nav>
 
-   
 
 
 
 
-      
+
+
 
 
     </div>

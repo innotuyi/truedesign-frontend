@@ -130,9 +130,9 @@ const Portfolio = () => {
                   <div className="card-body">
                     <h4>One-sided Engraving</h4>
                     <p>Laser engrave your design on the front of the bottle.</p>
-                    {/* <a href="#" className="card-link">
-                      Add to Cart
-                    </a> */}
+                    <a href="#" className="card-link">
+                      Make Order
+                    </a>
                     <FloatingWhatsApp
                      phoneNumber="+250785530789" 
                      accountName	="True Design Ltd"

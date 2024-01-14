@@ -1,5 +1,5 @@
 import React from "react";
-import Image1 from './image/1.webp'
+import Image1 from './image/1.jpg'
 import Footer from './Footer'
 import Nav from './Nav'
 const About = () => {
