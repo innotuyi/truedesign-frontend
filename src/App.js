@@ -82,6 +82,18 @@ import OfficeDesigning from './OfficeDesigning'
 import BooksDesigning from './BooksDesigning;'
 import LargeFormatPrinting from "./LarageFormatPrinting";
 import GiftBag from './GiftBags'
+import ConferenceBag from './ConferenceBag'
+import VideoTransitions from './VideoTransitions'
+import ETenderingProcessTraining from './ETenderingProcessTraining'
+import CompanyProfile from './CompanyProfile'
+import QuickBooksTraining from './QuickBooksTraining'
+import TaxDeclarationTraining from './TaxDeclarationTraining'
+import ConceptNoteDeveloping from './ConceptNoteDeveloping'
+import BusinessPlan from './BusinessPlan'
+import StrategicPlanning from './StrategicPlanning'
+import FinancialAnalysis from './FinancialAnalysis'
+import EBMUsingTraining from './EBMUsingTraining'
+import BusinessAdvisory from './BusinessAdvisory'
 
 
 function App() {
@@ -91,6 +103,30 @@ function App() {
         <Routes>
           <Route path="/"  element={<Home />} exact/>
           <Route path="service"  element={<Service />} />
+          <Route path=""  element={<Service />} />
+          <Route path="BusinessPlan"  element={<BusinessPlan />} />
+          <Route path="BusinessAdvisory"  element={<BusinessAdvisory />} />
+
+          <Route path="FinancialAnalysis"  element={<FinancialAnalysis />} />
+          <Route path="EBMUsingTraining"  element={<EBMUsingTraining />} />
+
+
+
+
+          <Route path="conference"  element={<ConferenceBag />} />
+          <Route path="concept"  element={<ConceptNoteDeveloping />} />
+          <Route path="tax"  element={<TaxDeclarationTraining />} />
+          <Route path="profile"  element={<CompanyProfile />} />
+          <Route path="VideoTransitions"  element={<VideoTransitions />} />
+          <Route path="tendering"  element={<ETenderingProcessTraining />} />
+          <Route path="QuickBooksTraining"  element={<QuickBooksTraining />} />
+
+          <Route path="StrategicPlanning"  element={<StrategicPlanning />} />
+
+
+
+
+
           <Route path="video"  element={<Video />} />
           <Route path="printing"  element={<ThreeDPrintingAndLighting />} />
           <Route path="cartonsBoxes"  element={<CartonsBoxes />} />

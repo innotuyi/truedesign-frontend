@@ -711,21 +711,21 @@ const Header = () => {
                  Flyers
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Menu
                 </a>
-              </NavLink>
-              <NavLink to="/banner">
+              </NavLink> */}
+              <NavLink to="/business">
                   <a class="nav-item nav-link">
                  Business Cards
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Cartons/Boxes
                 </a>
-              </NavLink>
+              </NavLink> */}
 
                 {/* Add more dropdown links as needed */}
               </div>
@@ -747,12 +747,12 @@ const Header = () => {
                   Back Drop
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/conference">
                   <a class="nav-item nav-link">
                   Conference Bags
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/shirt">
                   <a class="nav-item nav-link">
                  T-shirts
                 </a>
@@ -774,17 +774,17 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/banner">
+              <NavLink to="/video">
                   <a class="nav-item nav-link">
                   Documentary Videos
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/photography">
                   <a class="nav-item nav-link">
                  Photography
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/documentary">
                   <a class="nav-item nav-link">
                   Motion Graphics
                 </a>
@@ -807,7 +807,7 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/banner">
+              <NavLink to="/profile">
                   <a class="nav-item nav-link">
                   Companies Contracts/Files
                 </a>
@@ -833,47 +833,47 @@ const Header = () => {
                 E-procurement   & Proffessional services              </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/banner">
+              <NavLink to="/tendering">
                   <a class="nav-item nav-link">
                   E-tendering Process Training
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/QuickBooksTraining">
                   <a class="nav-item nav-link">
-                  QuickBooks Trainging
+                  QuickBooks Training
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/tax">
                   <a class="nav-item nav-link">
                  Tax Declaration Training
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/concept">
                   <a class="nav-item nav-link">
                   Concept Note Developing
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/BusinessPlan">
                   <a class="nav-item nav-link">
                   Business Plan
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/StrategicPlanning">
                   <a class="nav-item nav-link">
                   Strategic Planning
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/FinancialAnalysis">
                   <a class="nav-item nav-link">
                   Financial Analysis
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/EBMUsingTraining">
                   <a class="nav-item nav-link">
                  EBM Using Training 
                 </a>
               </NavLink>
-              <NavLink to="/banner">
+              <NavLink to="/BusinessAdvisory">
                   <a class="nav-item nav-link">
                  Business Advisory
                 </a>
