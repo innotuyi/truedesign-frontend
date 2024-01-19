@@ -94,6 +94,7 @@ import StrategicPlanning from './StrategicPlanning'
 import FinancialAnalysis from './FinancialAnalysis'
 import EBMUsingTraining from './EBMUsingTraining'
 import BusinessAdvisory from './BusinessAdvisory'
+import Order from './Order'
 
 
 function App() {
@@ -104,6 +105,8 @@ function App() {
           <Route path="/"  element={<Home />} exact/>
           <Route path="service"  element={<Service />} />
           <Route path=""  element={<Service />} />
+          <Route path="order"  element={<Order />} />
+
           <Route path="BusinessPlan"  element={<BusinessPlan />} />
           <Route path="BusinessAdvisory"  element={<BusinessAdvisory />} />
 

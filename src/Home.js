@@ -22,7 +22,6 @@ const Home = () => {
 
            <CourseCarousel/>
 
-           
          </div>
         <Portfolio/> 
         <ClientPage/>

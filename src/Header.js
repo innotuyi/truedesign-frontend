@@ -28,7 +28,7 @@ const Header = () => {
         </div>
 
         <div>
-          <a href='' className='btn btn-danger btn-lg'>Place Your Order</a>
+         <NavLink to="/order">  <a  className='btn btn-danger btn-lg'>Place Your Order</a></NavLink>
         </div>
       </div>
 
