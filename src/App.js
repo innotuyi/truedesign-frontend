@@ -28,6 +28,62 @@ import BusinessCard from './BusinessCard'
 import Calendar from './Calendar'
 import Banner from './Banner'
 import BackLit from './BackLit'
+import Folder from './Folder'
+import AnnualReport from './AnnualReport'
+import Invitation from './Invitation'
+import NewLetter from './NewsLetter'
+import NoteBooks from './NoteBooks'
+import Diaries from './Diaries'
+import Card from './IDCards'
+import Envilope from './Envilopes'
+import ReflectiveStickerImage from './ReflectiveStickerImage'
+import Pv from './PVCStickers'
+import Contravision from './Contravision'
+import WallPaper from './Wallpapers'
+import Gazebo from './Gazebo'
+import WheelCovers from "./WheelConvers";
+import Frost from './FrostStickers'
+import TShirt from './TShirt'
+import Umbrella from './Umbrellas'
+import Overall from './Overalls'
+import Uniforms from './Uniforms'
+import Exhibition from './ExhibitionBooth'
+import Interior from './OfficeInterior'
+import DirectionDoorSigns from './DirectionDoorSigns'
+import Car from './CarBranding'
+import Sign from './IlluminatedSigns'
+import Three from './ThreeDSigns'
+import Street from './StreetSigns'
+import Board from './Billboards'
+import Safety from './SafetySigns'
+import Business from './BusinessWebsite'
+import Commerce from './EcommerceWebsite'
+import Domain from './DomainAndEmail'
+import Pen from './ExecutivePens'
+import Mug from './Mugs'
+import Table from './TableTalkers'
+import Talker from './AcrylicTableTalkers'
+import Ring from './ExecutiveKeyRings'
+import Submission from './SubmissionTravelMug'
+import Wedding from './Wedding'
+import Birthday from './Birthday'
+import Corporarte from './Corporate'
+import Music from './Music'
+import Advert from './Adverts'
+import Documentary from './Documentaries'
+import Video from './DocumentaryVideos'
+import Photography from './Photography'
+import ThreeDPrintingAndLighting from './ThreeDPrintingAndLighting'
+import CartonsBoxes from './CartonsBoxes'
+import Hat from './Hats'
+import WaterBottleBranding from './WaterBottleBranding'
+import RainCoat from './RainCoats'
+import OfficeDesigning from './OfficeDesigning'
+import BooksDesigning from './BooksDesigning;'
+import LargeFormatPrinting from "./LarageFormatPrinting";
+import GiftBag from './GiftBags'
+
+
 function App() {
   return (
     <>
@@ -35,6 +91,106 @@ function App() {
         <Routes>
           <Route path="/"  element={<Home />} exact/>
           <Route path="service"  element={<Service />} />
+          <Route path="video"  element={<Video />} />
+          <Route path="printing"  element={<ThreeDPrintingAndLighting />} />
+          <Route path="cartonsBoxes"  element={<CartonsBoxes />} />
+          <Route path="hats"  element={<Hat />} />
+          <Route path="waterBottleBranding"  element={<WaterBottleBranding />} />
+          <Route path="rainCoat"  element={<RainCoat />} />
+          <Route path="office"  element={<OfficeDesigning />} />
+          <Route path="booksDesigning"  element={<BooksDesigning />} />
+          <Route path="formatPrinting"  element={<LargeFormatPrinting />} />
+          <Route path="giftbag"  element={<GiftBag />} />
+
+          <Route path="pen"  element={<Pen />} />
+          <Route path="mug"  element={<Mug  />} />
+          <Route path="table"  element={<Table  />} />
+          <Route path="talker"  element={<Talker  />} />
+          <Route path="ring"  element={<Ring  />} />
+          <Route path="submission"  element={<Submission  />} />
+          <Route path="wedding"  element={<Wedding  />} />
+          <Route path="birthday"  element={<Birthday  />} />
+          <Route path="corporate"  element={<Corporarte  />} />
+          <Route path="music"  element={<Music  />} />
+          <Route path="advert"  element={<Advert  />} />
+          <Route path="documentary"  element={<Documentary  />} />
+          <Route path="photography"  element={<Photography  />} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <Route path="folder"  element={<Folder />} />
+          <Route path="report"  element={<AnnualReport />} />
+          <Route path="invitation"  element={<Invitation />} />
+          <Route path="newsletter"  element={<NewLetter />} />
+          <Route path="notebook"  element={<NoteBooks />} />
+          <Route path="diaries"  element={<Diaries />} />
+          <Route path="card"  element={<Card />} />
+          <Route path="envilope"  element={<Envilope />} />
+          <Route path="ReflectiveStickerImage"  element={<ReflectiveStickerImage />} />
+          <Route path="pv"  element={<Pv />} />
+          <Route path="Contravision"  element={<Contravision />} />
+          <Route path="wallpaper"  element={<WallPaper />} />
+          <Route path="gazebo"  element={<Gazebo />} />
+          <Route path="whell"  element={<WheelCovers />} />
+          <Route path="frost"  element={<Frost />} />
+          <Route path="shirt"  element={<TShirt  />} />
+          <Route path="Umbrella"  element={<Umbrella  />} />
+          <Route path="overall"  element={<Overall  />} />
+          <Route path="uniform"  element={<Uniforms  />} />
+          <Route path="exhibition"  element={<Exhibition  />} />
+          <Route path="interior"  element={<Interior  />} />
+          <Route path="DirectionDoorSigns"  element={<DirectionDoorSigns  />} />
+          <Route path="car"  element={<Car  />} />
+          <Route path="sign"  element={<Sign  />} />
+          <Route path="three"  element={<Three  />} />
+          <Route path="street"  element={<Street  />} />
+          <Route path="board"  element={<Board  />} />
+          <Route path="safety"  element={<Safety  />} />
+          <Route path="commerce"  element={<Commerce  />} />
+          <Route path="business"  element={<Business   />} />
+          <Route path="domain"  element={<Domain   />} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
           <Route path="poster"  element={<Poster />} />
           <Route path="sticker"  element={<Sticker />} />
           <Route path="bronchures"  element={<Bronchures />} />
