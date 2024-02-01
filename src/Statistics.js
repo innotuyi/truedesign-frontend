@@ -49,7 +49,7 @@ useEffect(  ()=>{
   async function getforsale() {
     try {
 
-      const {data} = await axios.get(`${APP_URL}/api/allContacts`);
+      const {data} = await axios.get(`${APP_URL}/api/allJobs`);
 
       if(data) {
 
