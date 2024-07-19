@@ -13,23 +13,14 @@ const Home = () => {
   return (
     <>
       <div class="container-xxl bg-white p-0">
-      
-
-       <Nav/>
-       
-       <div class="mt-2 bg-light">
-           
-
-           <CourseCarousel/>
-
-         </div>
-        <Portfolio/> 
-        <ClientPage/>
-        <LargeImage/>
-        
-     
-        
-        <Footer/>
+        <Nav />
+        <div class="mt-2 bg-light">
+          <CourseCarousel />
+        </div>
+        {/* <Portfolio /> */}
+        <ClientPage />
+        <LargeImage />
+        <Footer />
         <a
           href="#"
           class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"
