@@ -27,9 +27,9 @@ const Header = () => {
           </span>
         </div>
 
-        <div>
+        {/* <div>
          <NavLink to="/order">  <a  className='btn btn-danger btn-lg'>Place Your Order</a></NavLink>
-        </div>
+        </div> */}
       </div>
 
       {/* Bottom Navbar with Dropdowns */}
