@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import Nav from './Nav';
 import Footer from './Footer';
-import axios from 'axios'
-import config from './config'
 import { ToastContainer, toast } from "react-toastify";
-const APP_URL = config.apiUrl
-
-
 
 const Order = () => {
   const [orderItem, setOrderItem] = useState('');
@@ -15,30 +10,21 @@ const Order = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
- 
 
+    // Your WhatsApp number in international format without +
+    const phoneNumber = '250785530789';  // Replace with your WhatsApp number
 
-    const payload = {
-     item: orderItem,
-     quantity: orderQuantity,
-      description:orderDescription,
-      
-    }
+    // Create the WhatsApp message with the form data
+    const message = `Order Details:\nItem: ${orderItem}\nQuantity: ${orderQuantity}\nDescription: ${orderDescription}`;
 
+    // WhatsApp URL format with phone number and pre-filled message
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
-
-    axios
-      .post(
-        `${APP_URL}/api/orders`,
-        payload
-      )
-      .then(function (response) {
-        toast.success("Order submitted");
-      })
-      .catch(function (error) {
-        console.log("Error response: ", error);
-      });
-    }
+    // Open WhatsApp with the pre-filled message
+    window.open(whatsappUrl, '_blank');
+    
+    toast.success("Redirecting to WhatsApp...");
+  }
 
   return (
     <>
@@ -46,7 +32,6 @@ const Order = () => {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="row g-5">
-     
             <div className="col-lg-6 offset-md-3 bg-light justify-content-center text-center">
               <h2 className="pt-5">Place Your Order</h2>
               <form onSubmit={handleSubmit}>
