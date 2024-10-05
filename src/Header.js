@@ -1,39 +1,34 @@
 import React from 'react';
-import Logo from "./image/logo.svg";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
-      <div className="navbar navbar-expand-lg mb-3">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img src={Logo} style={{
-
-              height: "200px",
-              width: "200px"
-            }}
-              alt="Logo" className="img-fluid" />
-          </a>
-
-          <span className="navbar-text mx-auto text-light">
-            <h1 className='text-light'>You Desire, We Design!
-            </h1>
+      <div className="navbar navbar-expand-lg mb-3 show-order"  style={{ padding: '10px 0', marginTop:"3rem" }}>
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          {/* Branding/Tagline Section */}
+          <span className="navbar-text mx-auto text-center text-light">
+            <h1 className='text-light' style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>You Desire, We Design!</h1>
           </span>
 
-          <span className="navbar-text text-right">
-            <div className='text-light'>Phone: +123 456 789</div>
-            <div className='text-light'>Email: your@email.com</div>
+          {/* Contact Info Section */}
+          <span className="navbar-text text-right text-light text-sm-end" style={{ marginRight: '2rem' }}>
+            <div style={{ fontSize: '1rem' }}>Phone: +123 456 789</div>
+            <div style={{ fontSize: '1rem' }}>Email: your@email.com</div>
           </span>
-        </div>
 
-        <div>
-         <NavLink to="/order">  <a  className='btn btn-danger btn-lg'>Place Your Order</a></NavLink>
+          {/* Call to Action */}
+          <div className="ml-auto">
+            <NavLink to="/order">
+              <a className='btn btn-danger btn-lg' style={{ padding: '10px 20px', fontSize: '1rem' }}>Place Your Order</a>
+            </NavLink>
+          </div>
         </div>
       </div>
 
+
       {/* Bottom Navbar with Dropdowns */}
-      <nav className="navbar navbar-expand-lg bg-light header ">
+      <nav className="navbar navbar-expand-lg bg-light header  hide-on-mobile">
         <div className="container-fluid">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
@@ -145,7 +140,7 @@ const Header = () => {
                 Large Format
               </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown  hide-on-mobile">
                 <NavLink to="/banner">
                   <a class="nav-item nav-link">
                     Banner(Rollup & tear Drop)
@@ -172,28 +167,28 @@ const Header = () => {
                 </NavLink>
                 <NavLink to="/wallpaper">
                   <a class="nav-item nav-link">
-                  Wall Papers
-                </a>
+                    Wall Papers
+                  </a>
                 </NavLink>
                 <NavLink to="/gazebo">
                   <a class="nav-item nav-link">
-                  GazeBo(Tent)                </a>
+                    GazeBo(Tent)                </a>
                 </NavLink>
                 <NavLink to="/whell">
                   <a class="nav-item nav-link">
-                  Whell Covers
-                </a>
+                    Whell Covers
+                  </a>
                 </NavLink>
                 <NavLink to="/frost">
                   <a class="nav-item nav-link">
-                  Frost Stickers        
-                </a>
+                    Frost Stickers
+                  </a>
                 </NavLink>
               </div>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle" l
                 href="#"
                 id="designBrandingDropdown"
                 role="button"
@@ -204,32 +199,32 @@ const Header = () => {
                 Garmet Printing
               </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/shirt">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown hide-on-mobile">
+                <NavLink to="/shirt">
                   <a class="nav-item nav-link">
-                  T-Shirts
-                </a>
-              </NavLink>
-             
-              <NavLink to="/Umbrella">
-                  <a class="nav-item nav-link">
-                  Unmbrellas
+                    T-Shirts
+                  </a>
+                </NavLink>
 
-                </a>
-              </NavLink>
-              <NavLink to="/overall">
+                <NavLink to="/Umbrella">
                   <a class="nav-item nav-link">
-                  Overalls
+                    Unmbrellas
 
-                </a>
-              </NavLink>
-              <NavLink to="/uniform">
+                  </a>
+                </NavLink>
+                <NavLink to="/overall">
                   <a class="nav-item nav-link">
-                  Uniforms
+                    Overalls
 
-                </a>
-              </NavLink>
-               
+                  </a>
+                </NavLink>
+                <NavLink to="/uniform">
+                  <a class="nav-item nav-link">
+                    Uniforms
+
+                  </a>
+                </NavLink>
+
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -245,32 +240,32 @@ const Header = () => {
                 Branding
               </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/exhibition">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown hide-on-mobile">
+                <NavLink to="/exhibition">
                   <a class="nav-item nav-link">
-                  Exhibition Booth
+                    Exhibition Booth
 
-                </a>
-              </NavLink>
-              <NavLink to="/interior">
+                  </a>
+                </NavLink>
+                <NavLink to="/interior">
                   <a class="nav-item nav-link">
-                  Office Interior
+                    Office Interior
 
-                </a>
-              </NavLink>
-              <NavLink to="/DirectionDoorSigns">
+                  </a>
+                </NavLink>
+                <NavLink to="/DirectionDoorSigns">
                   <a class="nav-item nav-link">
-                  Direction And Door Signs
+                    Direction And Door Signs
 
-                </a>
-              </NavLink>
+                  </a>
+                </NavLink>
 
-              <NavLink to="/car">
+                <NavLink to="/car">
                   <a class="nav-item nav-link">
-                  Car Branding
-                </a>
-              </NavLink>
-              
+                    Car Branding
+                  </a>
+                </NavLink>
+
 
               </div>
             </li>
@@ -288,32 +283,32 @@ const Header = () => {
                 Signages
               </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/sign">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown hide-on-mobile">
+                <NavLink to="/sign">
                   <a class="nav-item nav-link">
-                  Illuminated signs
-                </a>
-              </NavLink>
-              <NavLink to="/three">
+                    Illuminated signs
+                  </a>
+                </NavLink>
+                <NavLink to="/three">
                   <a class="nav-item nav-link">
-                  3D Signs
-                </a>
-              </NavLink>
-              <NavLink to="/street">
+                    3D Signs
+                  </a>
+                </NavLink>
+                <NavLink to="/street">
                   <a class="nav-item nav-link">
-                  Street Signs
-                </a>
-              </NavLink>
-              <NavLink to="/board">
+                    Street Signs
+                  </a>
+                </NavLink>
+                <NavLink to="/board">
                   <a class="nav-item nav-link">
-                  Billboards
-                </a>
-              </NavLink>
-              <NavLink to="/safety">
+                    Billboards
+                  </a>
+                </NavLink>
+                <NavLink to="/safety">
                   <a class="nav-item nav-link">
-                  Safety Signs
-                </a>
-              </NavLink>
+                    Safety Signs
+                  </a>
+                </NavLink>
 
               </div>
             </li>
@@ -328,37 +323,37 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Web Design             
-                 </a>
+                Web Design
+              </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/commerce">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown hide-on-mobile">
+                <NavLink to="/commerce">
                   <a class="nav-item nav-link">
-                  E-commerce Website
-                </a>
-              </NavLink>
-              <NavLink to="/commerce">
+                    E-commerce Website
+                  </a>
+                </NavLink>
+                <NavLink to="/commerce">
                   <a class="nav-item nav-link">
-                  Business Website
-                </a>
-              </NavLink>
-              <NavLink to="/commerce">
+                    Business Website
+                  </a>
+                </NavLink>
+                <NavLink to="/commerce">
                   <a class="nav-item nav-link">
-                  Portifolion Website
-                </a>
-              </NavLink>
-              <NavLink to="/business">
+                    Portifolion Website
+                  </a>
+                </NavLink>
+                <NavLink to="/business">
                   <a class="nav-item nav-link">
-                  Entertainment Website
-                </a>
-              </NavLink>
-              <NavLink to="/domain">
+                    Entertainment Website
+                  </a>
+                </NavLink>
+                <NavLink to="/domain">
                   <a class="nav-item nav-link">
-                  Domain and Email
-                </a>
-              </NavLink>
-  
-                
+                    Domain and Email
+                  </a>
+                </NavLink>
+
+
               </div>
             </li>
 
@@ -374,38 +369,38 @@ const Header = () => {
               >
                 Promotional Items              </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/pen">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown hide-on-mobile">
+                <NavLink to="/pen">
                   <a class="nav-item nav-link">
-                  Executive Pens
-                </a>
-              </NavLink>
-              <NavLink to="/mug">
+                    Executive Pens
+                  </a>
+                </NavLink>
+                <NavLink to="/mug">
                   <a class="nav-item nav-link">
-                  Mugs
-                </a>
-              </NavLink>
-              <NavLink to="/table">
+                    Mugs
+                  </a>
+                </NavLink>
+                <NavLink to="/table">
                   <a class="nav-item nav-link">
-                  Table Talkers
-                </a>
-              </NavLink>
-              <NavLink to="/talker">
+                    Table Talkers
+                  </a>
+                </NavLink>
+                <NavLink to="/talker">
                   <a class="nav-item nav-link">
-                  Acrylic Table Talkers
-                </a>
-              </NavLink>
-              <NavLink to="/ring">
+                    Acrylic Table Talkers
+                  </a>
+                </NavLink>
+                <NavLink to="/ring">
                   <a class="nav-item nav-link">
-                  Executive Key Rings
-                </a>
-              </NavLink>
-             
-              <NavLink to="/submission">
+                    Executive Key Rings
+                  </a>
+                </NavLink>
+
+                <NavLink to="/submission">
                   <a class="nav-item nav-link">
-                  Submission Travel Mug
-                </a>
-              </NavLink>
+                    Submission Travel Mug
+                  </a>
+                </NavLink>
               </div>
             </li>
 
@@ -421,54 +416,54 @@ const Header = () => {
               >
                 Photos and Videos              </a>
 
-              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/wedding">
+              <div className="dropdown-menu" aria-labelledby="designBrandingDropdown hide-on-mobile">
+                <NavLink to="/wedding">
                   <a class="nav-item nav-link">
-                  Wedding
-                </a>
-              </NavLink>
-              <NavLink to="/birthday">
+                    Wedding
+                  </a>
+                </NavLink>
+                <NavLink to="/birthday">
                   <a class="nav-item nav-link">
-                  Birthday
-                </a>
-              </NavLink>
-              <NavLink to="/corporate">
+                    Birthday
+                  </a>
+                </NavLink>
+                <NavLink to="/corporate">
                   <a class="nav-item nav-link">
-                  Corporate
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Corporate
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Products
                 </a>
               </NavLink> */}
-              <NavLink to="/music">
+                <NavLink to="/music">
                   <a class="nav-item nav-link">
-                  Music
-                </a>
-              </NavLink>
-              <NavLink to="/advert">
+                    Music
+                  </a>
+                </NavLink>
+                <NavLink to="/advert">
                   <a class="nav-item nav-link">
-                  Adverts
-                </a>
-              </NavLink>  
-              <NavLink to="/documentary">
+                    Adverts
+                  </a>
+                </NavLink>
+                <NavLink to="/documentary">
                   <a class="nav-item nav-link">
-                  Documentaries
-                </a>
-              </NavLink>
+                    Documentaries
+                  </a>
+                </NavLink>
               </div>
             </li>
           </ul>
         </div>
       </nav>
 
-      <nav className="navbar navbar-expand-lg bg-light header">
+      <nav className="navbar navbar-expand-lg bg-light header  hide-on-mobile">
         <div className="container-fluid">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
 
-              
+
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -482,22 +477,22 @@ const Header = () => {
               </a>
               {/* Dropdown Menu for AUDIO VISUAL */}
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-              <NavLink to="/video">
+                <NavLink to="/video">
                   <a class="nav-item nav-link">
-                  Documentary videos
-                </a>
-              </NavLink>
-              <NavLink to="/photography">
+                    Documentary videos
+                  </a>
+                </NavLink>
+                <NavLink to="/photography">
                   <a class="nav-item nav-link">
-                  Photography
-                </a>
-              </NavLink>
-                
-              <NavLink to="/photography">
+                    Photography
+                  </a>
+                </NavLink>
+
+                <NavLink to="/photography">
                   <a class="nav-item nav-link">
-                  Motion Graphics
-                </a>
-              </NavLink>
+                    Motion Graphics
+                  </a>
+                </NavLink>
 
               </div>
             </li>
@@ -514,33 +509,33 @@ const Header = () => {
               >
                 Designing  &  Branding
               </a>
-              <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-              <NavLink to="/printing">
+              <div className="dropdown-menu" aria-labelledby="audioVisualDropdown hide-on-mobile">
+                <NavLink to="/printing">
                   <a class="nav-item nav-link">
-                  3D Printing And Lighting
-                </a>
-              </NavLink>
-              <NavLink to="/cartonsBoxes">
+                    3D Printing And Lighting
+                  </a>
+                </NavLink>
+                <NavLink to="/cartonsBoxes">
                   <a class="nav-item nav-link">
-                  Cartons / Boxes
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Cartons / Boxes
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Umbrella
                 </a>
               </NavLink>                */}
-              <NavLink to="/hats">
+                <NavLink to="/hats">
                   <a class="nav-item nav-link">
-                  Hats
-                </a>
-              </NavLink>
-              <NavLink to="/waterBottleBranding">
+                    Hats
+                  </a>
+                </NavLink>
+                <NavLink to="/waterBottleBranding">
                   <a class="nav-item nav-link">
-                  WaterBottle Branding
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    WaterBottle Branding
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Diaries/Agenda
                 </a>
@@ -555,37 +550,37 @@ const Header = () => {
                   Hats
                 </a>
               </NavLink> */}
-              <NavLink to="/banner">
+                <NavLink to="/banner">
                   <a class="nav-item nav-link">
-                  Rain Coats
-                </a>
-              </NavLink>
-              <NavLink to="/rainCoat">
+                    Rain Coats
+                  </a>
+                </NavLink>
+                <NavLink to="/rainCoat">
                   <a class="nav-item nav-link">
-                  Reflective Jackets
-                </a>
-              </NavLink>
-              <NavLink to="/OfficeDesigning">
+                    Reflective Jackets
+                  </a>
+                </NavLink>
+                <NavLink to="/OfficeDesigning">
                   <a class="nav-item nav-link">
-                  Office Designing
-                </a>
-              </NavLink>
-              <NavLink to="/office">
+                    Office Designing
+                  </a>
+                </NavLink>
+                <NavLink to="/office">
                   <a class="nav-item nav-link">
-                  Flyers DEsigning and Printing
-                </a>
-              </NavLink>
-              <NavLink to="/booksDesigning">
+                    Flyers DEsigning and Printing
+                  </a>
+                </NavLink>
+                <NavLink to="/booksDesigning">
                   <a class="nav-item nav-link">
-                  Books Designing
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Books Designing
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Apps Developing
                 </a>
               </NavLink> */}
-              {/* <NavLink to="/banner">
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Hermets
                 </a>
@@ -606,22 +601,22 @@ const Header = () => {
               </a>
               {/* Dropdown Menu for AUDIO VISUAL */}
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-              <NavLink to="/formatPrinting">
+                <NavLink to="/formatPrinting">
                   <a class="nav-item nav-link">
-                  Large Format Printing
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Large Format Printing
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Promotional materials
                 </a>
               </NavLink> */}
-              <NavLink to="/giftbag">
+                <NavLink to="/giftbag">
                   <a class="nav-item nav-link">
-                  Gift Bags
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Gift Bags
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Promotional materials
                 </a>
@@ -631,7 +626,7 @@ const Header = () => {
                  Calendars
                 </a>
               </NavLink> */}
-              {/* <NavLink to="/banner">
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Back Drop
                 </a>
@@ -641,22 +636,22 @@ const Header = () => {
                   Notepads
                 </a>
               </NavLink> */}
-              {/* <NavLink to="/banner">
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Folders
                 </a>
               </NavLink> */}
-              <NavLink to="/bronchures">
+                <NavLink to="/bronchures">
                   <a class="nav-item nav-link">
-                 Bronchures
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Bronchures
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Blocknotes
                 </a>
               </NavLink> */}
-              {/* <NavLink to="/banner">
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Nametags
                 </a>
@@ -667,61 +662,61 @@ const Header = () => {
                 </a>
               </NavLink> */}
 
-              <NavLink to="/shirt">
+                <NavLink to="/shirt">
                   <a class="nav-item nav-link">
-                  T-Shirts
-                </a>
-              </NavLink>
-              <NavLink to="/rainCoat">
+                    T-Shirts
+                  </a>
+                </NavLink>
+                <NavLink to="/rainCoat">
                   <a class="nav-item nav-link">
-                  Rain Coat
-                </a>
-              </NavLink>
-              <NavLink to="/banner">
-                  <a class="nav-item nav-link">
-                  Promotional materials
-                </a>
-              </NavLink>
-              
-                <NavLink to="/hats">
-                  <a class="nav-item nav-link">
-                 Hats
-                </a>
-              </NavLink>
-                <a className="dropdown-item" href="#">
+                    Rain Coat
+                  </a>
+                </NavLink>
                 <NavLink to="/banner">
                   <a class="nav-item nav-link">
-                  Banners
-                </a>
-              </NavLink>
+                    Promotional materials
+                  </a>
+                </NavLink>
+
+                <NavLink to="/hats">
+                  <a class="nav-item nav-link">
+                    Hats
+                  </a>
+                </NavLink>
+                <a className="dropdown-item" href="#">
+                  <NavLink to="/banner">
+                    <a class="nav-item nav-link">
+                      Banners
+                    </a>
+                  </NavLink>
 
                 </a>
                 <NavLink to="/booksDesigning">
                   <a class="nav-item nav-link">
-                  Books
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Books
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Pull ups
                 </a>
               </NavLink> */}
-              <NavLink to="/flyer">
+                <NavLink to="/flyer">
                   <a class="nav-item nav-link">
-                 Flyers
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Flyers
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                  Menu
                 </a>
               </NavLink> */}
-              <NavLink to="/business">
+                <NavLink to="/business">
                   <a class="nav-item nav-link">
-                 Business Cards
-                </a>
-              </NavLink>
-              {/* <NavLink to="/banner">
+                    Business Cards
+                  </a>
+                </NavLink>
+                {/* <NavLink to="/banner">
                   <a class="nav-item nav-link">
                   Cartons/Boxes
                 </a>
@@ -742,21 +737,21 @@ const Header = () => {
               >
                 Event branding              </a>
               <div className="dropdown-menu" aria-labelledby="audioVisualDropdown">
-              <NavLink to="/banner">
+                <NavLink to="/banner">
                   <a class="nav-item nav-link">
-                  Back Drop
-                </a>
-              </NavLink>
-              <NavLink to="/conference">
+                    Back Drop
+                  </a>
+                </NavLink>
+                <NavLink to="/conference">
                   <a class="nav-item nav-link">
-                  Conference Bags
-                </a>
-              </NavLink>
-              <NavLink to="/shirt">
+                    Conference Bags
+                  </a>
+                </NavLink>
+                <NavLink to="/shirt">
                   <a class="nav-item nav-link">
-                 T-shirts
-                </a>
-              </NavLink>
+                    T-shirts
+                  </a>
+                </NavLink>
               </div>
             </li>
 
@@ -774,22 +769,22 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/video">
+                <NavLink to="/video">
                   <a class="nav-item nav-link">
-                  Documentary Videos
-                </a>
-              </NavLink>
-              <NavLink to="/photography">
+                    Documentary Videos
+                  </a>
+                </NavLink>
+                <NavLink to="/photography">
                   <a class="nav-item nav-link">
-                 Photography
-                </a>
-              </NavLink>
-              <NavLink to="/documentary">
+                    Photography
+                  </a>
+                </NavLink>
+                <NavLink to="/documentary">
                   <a class="nav-item nav-link">
-                  Motion Graphics
-                </a>
-              </NavLink>
-             
+                    Motion Graphics
+                  </a>
+                </NavLink>
+
               </div>
             </li>
 
@@ -807,16 +802,16 @@ const Header = () => {
               </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/profile">
+                <NavLink to="/profile">
                   <a class="nav-item nav-link">
-                  Companies Contracts/Files
-                </a>
-              </NavLink>
-              <NavLink to="/banner">
+                    Companies Contracts/Files
+                  </a>
+                </NavLink>
+                <NavLink to="/banner">
                   <a class="nav-item nav-link">
-                  Video Translting
-                </a>
-              </NavLink>
+                    Video Translting
+                  </a>
+                </NavLink>
               </div>
             </li>
 
@@ -833,51 +828,51 @@ const Header = () => {
                 E-procurement   & Proffessional services              </a>
 
               <div className="dropdown-menu" aria-labelledby="designBrandingDropdown">
-              <NavLink to="/tendering">
+                <NavLink to="/tendering">
                   <a class="nav-item nav-link">
-                  E-tendering Process Training
-                </a>
-              </NavLink>
-              <NavLink to="/QuickBooksTraining">
+                    E-tendering Process Training
+                  </a>
+                </NavLink>
+                <NavLink to="/QuickBooksTraining">
                   <a class="nav-item nav-link">
-                  QuickBooks Training
-                </a>
-              </NavLink>
-              <NavLink to="/tax">
+                    QuickBooks Training
+                  </a>
+                </NavLink>
+                <NavLink to="/tax">
                   <a class="nav-item nav-link">
-                 Tax Declaration Training
-                </a>
-              </NavLink>
-              <NavLink to="/concept">
+                    Tax Declaration Training
+                  </a>
+                </NavLink>
+                <NavLink to="/concept">
                   <a class="nav-item nav-link">
-                  Concept Note Developing
-                </a>
-              </NavLink>
-              <NavLink to="/BusinessPlan">
+                    Concept Note Developing
+                  </a>
+                </NavLink>
+                <NavLink to="/BusinessPlan">
                   <a class="nav-item nav-link">
-                  Business Plan
-                </a>
-              </NavLink>
-              <NavLink to="/StrategicPlanning">
+                    Business Plan
+                  </a>
+                </NavLink>
+                <NavLink to="/StrategicPlanning">
                   <a class="nav-item nav-link">
-                  Strategic Planning
-                </a>
-              </NavLink>
-              <NavLink to="/FinancialAnalysis">
+                    Strategic Planning
+                  </a>
+                </NavLink>
+                <NavLink to="/FinancialAnalysis">
                   <a class="nav-item nav-link">
-                  Financial Analysis
-                </a>
-              </NavLink>
-              <NavLink to="/EBMUsingTraining">
+                    Financial Analysis
+                  </a>
+                </NavLink>
+                <NavLink to="/EBMUsingTraining">
                   <a class="nav-item nav-link">
-                 EBM Using Training 
-                </a>
-              </NavLink>
-              <NavLink to="/BusinessAdvisory">
+                    EBM Using Training
+                  </a>
+                </NavLink>
+                <NavLink to="/BusinessAdvisory">
                   <a class="nav-item nav-link">
-                 Business Advisory
-                </a>
-              </NavLink>
+                    Business Advisory
+                  </a>
+                </NavLink>
               </div>
             </li>
 

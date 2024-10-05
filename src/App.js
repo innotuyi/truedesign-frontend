@@ -260,13 +260,6 @@ function App() {
           <Route path="register" element ={<RegisterPage/>} />
           <Route path="payment" element ={<PaymentProcess/>} />
           <Route path="update/:id" element ={<UpdateProductScreen/>} />
-
-
-
-
-
-
-
           </Routes>
       </BrowserRouter>
     </>
